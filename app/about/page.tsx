@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
+import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
 import type { ReactNode } from "react";
 
@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 /* ---------- shared ---------- */
-const RED = "#E63329";
+const GREEN = "#25D366";
 const P = { fill: "none", stroke: "currentColor", strokeWidth: 1.7, strokeLinecap: "round", strokeLinejoin: "round" } as const;
 const icons: Record<string, ReactNode> = {
   users: <><circle cx="9" cy="8" r="3" /><path d="M3 20c0-4 3-6 6-6s6 2 6 6M16 5a3 3 0 0 1 0 6M18 14c2 .8 3 3 3 6" /></>,
@@ -32,12 +32,12 @@ const Icon = ({ n, size = 24 }: { n: string; size?: number }) => (
 
 const pad = "px-6 lg:px-[max(2.5rem,calc((100vw-1240px)/2))]";
 const H = "font-heading font-extrabold tracking-[-0.02em] text-[#0B1220] leading-[1.06]";
-const Dot = () => <span style={{ color: RED }}>.</span>;
+const Dot = () => <span style={{ color: GREEN }}>.</span>;
 const body = "text-[#8A8FA3] leading-relaxed";
 
 const Eyebrow = ({ n, label }: { n: string; label: string }) => (
   <p className="flex items-center gap-3 text-[12px] font-bold tracking-[0.14em] uppercase text-[#8A8FA3]">
-    <span className="w-6 h-[3px]" style={{ background: RED }} />
+    <span className="w-6 h-[3px]" style={{ background: GREEN }} />
     {n}<span className="text-gray-300">|</span>{label}
   </p>
 );
@@ -47,7 +47,7 @@ const Brand = () => (
 const SideTag = ({ lines, light }: { lines: string[]; light?: boolean }) => (
   <p className={`hidden xl:block text-[11px] font-semibold tracking-[0.22em] leading-7 border-l-2 pl-4 ${light ? "text-white/85 border-white/50" : "text-[#8A8FA3] border-gray-300"}`}>
     {lines.map((l) => <span key={l} className="block">{l}</span>)}
-    <span className="block w-8 h-[3px] mt-2" style={{ background: RED }} />
+    <span className="block w-8 h-[3px] mt-2" style={{ background: GREEN }} />
   </p>
 );
 const Photo = ({ src, alt, cls = "" }: { src: string; alt: string; cls?: string }) => {
@@ -58,8 +58,8 @@ const Photo = ({ src, alt, cls = "" }: { src: string; alt: string; cls?: string 
     </div>
   );
 };
-const RedBtn = ({ href, children }: { href: string; children: ReactNode }) => (
-  <Link href={href} className="inline-flex items-center justify-center gap-3 px-8 py-4 text-[15px] font-semibold text-white transition hover:brightness-110" style={{ background: RED }}>
+const GreenBtn = ({ href, children }: { href: string; children: ReactNode }) => (
+  <Link href={href} className="inline-flex items-center justify-center gap-3 px-8 py-4 text-[15px] font-semibold text-white transition hover:brightness-110" style={{ background: GREEN }}>
     {children}<Icon n="arrow" size={16} />
   </Link>
 );
@@ -70,7 +70,7 @@ const GhostBtn = ({ href, children }: { href: string; children: ReactNode }) => 
 );
 const MiniFeat = ({ icon, title, desc }: { icon: string; title: string; desc: string }) => (
   <div className="flex gap-4">
-    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-red-50" style={{ color: RED }}>
+    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-green-50" style={{ color: GREEN }}>
       <Icon n={icon} size={22} />
     </span>
     <div>
@@ -84,7 +84,7 @@ const MiniFeat = ({ icon, title, desc }: { icon: string; title: string; desc: st
 export default function AboutPage() {
   return (
     <>
-      <Header />
+      <SiteHeader />
       <main>
         {/* ---------- 1 · HERO ---------- */}
         <section className="relative overflow-hidden bg-white">
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 At Bauer Painting, we provide professional commercial painting services for businesses across the Greater Toronto Area and surrounding communities. Since 2001, we&rsquo;ve been helping property owners, managers, and businesses maintain and enhance their spaces with quality, reliability, and care.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <RedBtn href="/services">Explore Our Services</RedBtn>
+                <GreenBtn href="/services">Explore Our Services</GreenBtn>
                 <GhostBtn href="tel:+12899021221"><Icon n="phone" size={18} /> (289) 902-1221</GhostBtn>
               </div>
               <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:divide-x divide-gray-200">
@@ -112,7 +112,7 @@ export default function AboutPage() {
               <Photo src="/about/about-hero.jpg" alt="Bauer Painting commercial building and service van" cls="absolute inset-0" />
               <div className="absolute top-24 lg:top-28 right-8 lg:right-12 text-right">
                 <p className="text-white text-[13px] font-semibold tracking-[0.2em] leading-7 drop-shadow">ESTABLISHED<br />2001</p>
-                <span className="block w-10 h-[3px] mt-2 ml-auto" style={{ background: RED }} />
+                <span className="block w-10 h-[3px] mt-2 ml-auto" style={{ background: GREEN }} />
               </div>
               <div className="absolute bottom-10 right-8 lg:right-12"><SideTag light lines={["PEOPLE", "SPACES", "POSSIBILITIES"]} /></div>
             </div>
@@ -149,7 +149,7 @@ export default function AboutPage() {
                   ["TODAY", "Continuing to Grow", "A trusted commercial painting partner for businesses across Southern Ontario."],
                 ].map(([y, t, d]) => (
                   <div key={y} className="relative">
-                    <span className="absolute -left-[41px] top-1 h-4 w-4 rounded-full border-[3px] bg-white" style={{ borderColor: RED }} />
+                    <span className="absolute -left-[41px] top-1 h-4 w-4 rounded-full border-[3px] bg-white" style={{ borderColor: GREEN }} />
                     <p className="text-[26px] font-extrabold text-[#0B1220] tracking-tight">{y}</p>
                     <p className="mt-1 font-bold text-[#0B1220]">{t}</p>
                     <p className="mt-1 text-[14px] text-[#8A8FA3] leading-relaxed">{d}</p>
@@ -168,7 +168,7 @@ export default function AboutPage() {
                 ["TODAY", "Continuing to Grow", "A trusted commercial painting partner for businesses across Southern Ontario."],
               ].map(([y, t, d]) => (
                 <div key={y} className="relative">
-                  <span className="absolute -left-[41px] top-1 h-4 w-4 rounded-full border-[3px] bg-white" style={{ borderColor: RED }} />
+                  <span className="absolute -left-[41px] top-1 h-4 w-4 rounded-full border-[3px] bg-white" style={{ borderColor: GREEN }} />
                   <p className="text-[22px] font-extrabold text-[#0B1220]">{y}</p>
                   <p className="mt-1 font-bold text-[#0B1220]">{t}</p>
                   <p className="mt-1 text-[14px] text-[#8A8FA3]">{d}</p>
@@ -203,12 +203,12 @@ export default function AboutPage() {
               ].map(([icon, n, t, d], i, arr) => (
                 <div key={t} className="relative">
                   <div className="flex items-center gap-6">
-                    <span className="flex h-16 w-16 items-center justify-center rounded-full bg-red-50" style={{ color: RED }}>
+                    <span className="flex h-16 w-16 items-center justify-center rounded-full bg-green-50" style={{ color: GREEN }}>
                       <Icon n={icon} size={30} />
                     </span>
                     {i < arr.length - 1 && <Icon n="arrow" size={22} />}
                   </div>
-                  <p className="mt-5 text-[15px] font-bold" style={{ color: RED }}>{n}</p>
+                  <p className="mt-5 text-[15px] font-bold" style={{ color: GREEN }}>{n}</p>
                   <p className="mt-1 text-[19px] font-bold text-[#0B1220]">{t}</p>
                   <p className="mt-2 text-[14px] text-[#8A8FA3] leading-relaxed">{d}</p>
                 </div>
@@ -218,7 +218,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-[1fr_1fr_380px]">
             <Photo src="/about/about-team.jpg" alt="Bauer Painting team collaborating on site" cls="min-h-[280px] lg:min-h-[320px] lg:col-span-2" />
             <div className="bg-[#0B1220] text-white p-10 lg:p-12">
-              <span className="block w-10 h-[3px]" style={{ background: RED }} />
+              <span className="block w-10 h-[3px]" style={{ background: GREEN }} />
               <p className="mt-6 text-[24px] font-extrabold leading-snug">A Collaborative Approach<br />for Lasting Results.</p>
               <p className="mt-4 text-[15px] text-white/70 leading-relaxed">We believe great outcomes come from strong partnerships. That&rsquo;s why we work closely with our clients every step of the way.</p>
             </div>
@@ -238,7 +238,7 @@ export default function AboutPage() {
                 At Bauer Painting, our work is guided by a set of core principles that shape how we work with our clients, manage our projects, and deliver lasting results. These standards are at the heart of every space we paint and every relationship we build.
               </p>
               <div className="mt-8">
-                <span className="block w-10 h-[3px]" style={{ background: RED }} />
+                <span className="block w-10 h-[3px]" style={{ background: GREEN }} />
                 <p className="mt-4 text-[12px] font-semibold tracking-[0.2em] text-[#8A8FA3] leading-7">PEOPLE<br />SPACES<br />POSSIBILITIES</p>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function AboutPage() {
               <Photo src="/about/about-detail.jpg" alt="Bauer Painting craftsman painting a wall" cls="absolute inset-0" />
               <div className="absolute top-8 right-8 lg:right-12 text-right">
                 <p className="text-white text-[13px] font-semibold tracking-[0.2em] leading-7 drop-shadow">QUALITY<br />PEOPLE<br />STRONGER<br />SPACES</p>
-                <span className="block w-10 h-[3px] mt-2 ml-auto" style={{ background: RED }} />
+                <span className="block w-10 h-[3px] mt-2 ml-auto" style={{ background: GREEN }} />
               </div>
             </div>
           </div>
@@ -261,16 +261,16 @@ export default function AboutPage() {
                 <div key={t} className={i > 0 ? "sm:pl-8" : ""}>
                   <div className="flex items-center gap-4">
                     <p className="text-[26px] font-extrabold text-[#B9BFD0]">{n}</p>
-                    <span style={{ color: RED }}><Icon n={icon} size={30} /></span>
+                    <span style={{ color: GREEN }}><Icon n={icon} size={30} /></span>
                   </div>
-                  <span className="block w-8 h-[3px] mt-4" style={{ background: RED }} />
+                  <span className="block w-8 h-[3px] mt-4" style={{ background: GREEN }} />
                   <p className="mt-3 text-[18px] font-bold text-[#0B1220]">{t}</p>
                   <p className="mt-2 text-[14px] text-[#8A8FA3] leading-relaxed">{d}</p>
                 </div>
               ))}
             </div>
             <div className="bg-[#0B1220] text-white p-10 lg:p-12">
-              <span className="block w-10 h-[3px]" style={{ background: RED }} />
+              <span className="block w-10 h-[3px]" style={{ background: GREEN }} />
               <p className="mt-6 text-[30px] font-extrabold leading-tight">More Than<br />Painting<Dot /></p>
               <p className="mt-4 text-[15px] text-white/70 leading-relaxed">A long-term partner for people, spaces and possibilities.</p>
             </div>
@@ -290,7 +290,7 @@ export default function AboutPage() {
                 From commercial interiors and exteriors to specialized painting solutions, Bauer Painting is ready to help you plan your next project. Our team is here to discuss your property, understand your needs, and provide the right solution.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <RedBtn href="/contact">Request a Quote</RedBtn>
+                <GreenBtn href="/contact">Request a Quote</GreenBtn>
                 <GhostBtn href="tel:+12899021221"><Icon n="phone" size={18} /> (289) 902-1221</GhostBtn>
               </div>
               <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:divide-x divide-gray-200">
@@ -314,16 +314,16 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4">
                 {["Toronto", "Oakville", "Milton", "Hamilton", "Kitchener", "Niagara Region", "Mississauga", "Burlington", "Brampton", "Guelph", "Cambridge"].map((c) => (
                   <p key={c} className="flex items-center gap-2 text-[14px] font-medium text-[#0B1220]">
-                    <span style={{ color: RED }}><Icon n="pin" size={16} /></span>{c}
+                    <span style={{ color: GREEN }}><Icon n="pin" size={16} /></span>{c}
                   </p>
                 ))}
               </div>
               <div className="lg:border-l lg:border-gray-200 lg:pl-8">
                 <p className="text-[14px] text-[#8A8FA3]">Not sure if we serve your area?</p>
-                <Link href="/contact" className="mt-2 inline-flex items-center gap-2 text-[15px] font-bold" style={{ color: RED }}>
+                <Link href="/contact" className="mt-2 inline-flex items-center gap-2 text-[15px] font-bold" style={{ color: GREEN }}>
                   Get in touch <Icon n="arrow" size={16} />
                 </Link>
-                <span className="block w-10 h-[3px] mt-3" style={{ background: RED }} />
+                <span className="block w-10 h-[3px] mt-3" style={{ background: GREEN }} />
               </div>
             </div>
           </div>
