@@ -17,6 +17,14 @@ module.exports = {
           navy: "#0D1B2A",
           navyLight: "#16283C",
         },
+        // Aliases used across components (Header, Footer, CTA buttons).
+        // Without these, classes like bg-primary / text-primary / bg-ink
+        // generate no CSS and those elements render unstyled.
+        primary: {
+          DEFAULT: "#25D366",
+          dark: "#1DA851",
+        },
+        ink: "#101828",
       },
       fontFamily: {
         heading: ["Montserrat", "Inter", "system-ui", "sans-serif"],

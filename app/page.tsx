@@ -33,7 +33,13 @@ const Quote = ({ children, right, dark = true }: { children: React.ReactNode; ri
 );
 
 const stats = [["24+", "Years of Experience"], ["1000+", "Projects Completed"], ["100%", "Client Focused"], ["11", "Service Areas"]];
-const brands = ["Scotiabank", "Loblaw", "Tim Hortons", "COSTCO", "Sheraton"];
+const brands: [string, string][] = [
+  ["Scotiabank", "font-bold tracking-tight"],
+  ["Loblaw", "font-black tracking-tight"],
+  ["Tim Hortons", "font-serif italic font-semibold"],
+  ["COSTCO", "font-extrabold italic tracking-tight"],
+  ["Sheraton", "font-serif font-semibold"],
+];
 const why4 = [
   ["clip", "Smart Planning", "Detailed planning to keep projects on schedule and minimize disruption to your business."],
   ["shield", "Total Reliability", "A team you can count on to show up, communicate clearly, and get the job done right."],
@@ -76,6 +82,7 @@ export default function Home() {
       <section className="relative bg-[#0a1220] text-white overflow-hidden reveal">
         <Img src="/home/hero.jpg" cls="!absolute inset-y-0 right-0 w-full lg:w-[62%]" pos="object-cover object-right" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a1220] via-[#0a1220]/85 to-[#0a1220]/20" />
+        <p className="absolute right-8 top-36 hidden text-right text-[11px] font-medium leading-8 tracking-[0.28em] text-white/70 xl:block">BUILDINGS<br />BUSINESSES<br />BRIGHTER TOMORROWS<span className="ml-auto mt-3 block h-0.5 w-9 bg-[var(--acc)]" /></p>
         <div className={`relative ${pad} pt-16 pb-12`}>
           <p className="hlabel">Commercial Painting Experts Since 2001</p>
           <h1 className={`${HL} mt-8 text-[clamp(48px,6.4vw,100px)] uppercase max-w-[820px]`}>Spaces That Work Harder<Dot /></h1>
@@ -94,8 +101,8 @@ export default function Home() {
       </section>
       <div className={`${pad} py-8 bg-[#F6F7F9] flex flex-wrap items-center gap-x-12 gap-y-4`}>
         <p className="text-xs font-bold tracking-widest text-gray-700">TRUSTED BY<br />LEADING BUSINESSES</p>
-        {brands.map((b) => <span key={b} className="text-2xl font-bold text-gray-500">{b}</span>)}
-        <span className="ml-auto text-xs font-semibold tracking-widest text-gray-700">AND MANY MORE →</span>
+        {brands.map(([b, cls]) => <span key={b} className={`text-2xl text-gray-500 ${cls}`}>{b}</span>)}
+        <span className="ml-auto text-xs font-semibold tracking-widest text-gray-700">AND MANY MORE <span className="text-[var(--acc)]">→</span></span>
       </div>
 
       {/* 2 — Built for commercial */}
@@ -112,7 +119,14 @@ export default function Home() {
           </div>
           <div className="relative min-h-[420px]">
             <Img src="/home/built.jpg" cls="!absolute inset-0" pos="object-cover object-top" />
-            <div className="absolute right-0 bottom-0 bg-[#e3e4e6]/95 p-6 w-56"><p className="text-xs tracking-widest text-gray-600">EST.</p><p className="text-6xl font-bold text-gray-400">2001</p><p className="text-[11px] tracking-widest text-gray-700">SERVING COMMERCIAL CLIENTS FOR OVER 24 YEARS</p></div>
+            <div className="absolute right-0 top-0 hidden bg-[#0d1520]/90 px-6 py-5 md:block">
+              <p className="text-[11px] font-medium leading-7 tracking-[0.24em] text-white/85">PLANNED<br />PREPARED<br />PROFESSIONAL<br />ON TIME<br />ON BUDGET</p>
+            </div>
+            <div className="absolute bottom-0 right-0 w-60 bg-[#e3e4e6]/95 p-6">
+              <p className="flex items-center gap-3 text-xs tracking-[0.2em] text-gray-500">EST.<span className="h-px w-10 bg-gray-400" /><span className="h-px w-10 bg-[var(--acc)]" /></p>
+              <p className="mt-1 text-7xl font-bold leading-none text-gray-400">2001</p>
+              <p className="mt-2 text-[10px] tracking-[0.18em] text-gray-600">SERVING COMMERCIAL CLIENTS FOR OVER 24 YEARS</p>
+            </div>
           </div>
         </div>
         <div className={`${pad} py-10 bg-[#F0F0F1] grid sm:grid-cols-2 lg:grid-cols-4 gap-8 reveal-group`}>
@@ -160,11 +174,19 @@ export default function Home() {
         <div className="relative min-h-[460px] overflow-hidden">
           <Img src="/home/ind-feat.jpg" cls="!absolute inset-y-0 right-0 w-full lg:w-[56%]" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0d1520] via-[#0d1520]/90 to-transparent lg:via-[#0d1520]/70" />
-          <div className={`relative ${pad} py-14 max-w-[900px]`}>
+          <div className={`relative ${pad} pt-14 pb-14 lg:pb-56 max-w-[900px]`}>
             <p className="hlabel">Industries We Paint</p>
             <h2 className="mt-8 text-[clamp(38px,4.6vw,70px)] leading-[1.05] tracking-tight"><b className="font-extrabold">Different Industries.</b><br /><span className="font-light text-white/85">A Higher Standard.</span></h2>
             <p className="mt-6 text-lg text-white/85 max-w-lg leading-relaxed">From offices and retail spaces to industrial facilities and healthcare buildings, Bauer Painting delivers professional results for a wide range of commercial environments.</p>
             <Link href="/industries" className="hbtn mt-8">Explore All Industries <Icon n="arrow" size={16} /></Link>
+          </div>
+          <div className="absolute bottom-8 left-6 right-6 hidden max-w-xl items-center gap-6 rounded-lg border border-white/20 bg-white/10 p-6 backdrop-blur-md lg:flex lg:left-[max(2.5rem,calc((100vw-1240px)/2))]">
+            <div>
+              <p className="flex items-center gap-3 text-[10px] font-medium tracking-[0.24em] text-white/70"><span className="h-0.5 w-8 bg-[var(--acc)]" />FEATURED INDUSTRY<span className="h-px flex-1 bg-white/25" /></p>
+              <p className="mt-3 text-2xl font-bold">Commercial Offices</p>
+              <p className="mt-1 text-sm text-white/75">Create productive, professional spaces with high-quality interior painting.</p>
+            </div>
+            <span className="ml-auto flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/70"><Icon n="play" size={20} /></span>
           </div>
         </div>
         <div className={`${pad} py-6 bg-[#F3F4F6] text-white`}>
@@ -228,7 +250,7 @@ export default function Home() {
         <div className={`${pad} py-10 bg-[#F8F8F9] grid sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal-group`}>
           {how.map(([t, d, ic, list], i) => (
             <div key={t as string} className="reveal-item">
-              <div className="flex gap-3 mb-5"><div><p className="text-4xl font-bold text-gray-400">{`0${i + 1}`}</p><span className="block w-10 h-0.5 bg-[var(--acc)] mt-1" /></div><div><p className="font-bold tracking-wide uppercase">{t as string}</p><p className="text-sm text-gray-600 leading-snug">{d as string}</p></div></div>
+              <div className="relative flex gap-3 mb-5"><div><p className="text-4xl font-bold text-gray-400">{`0${i + 1}`}</p><span className="block w-10 h-0.5 bg-[var(--acc)] mt-1" /></div><div><p className="font-bold tracking-wide uppercase">{t as string}</p><p className="text-sm text-gray-600 leading-snug">{d as string}</p></div>{i < 3 && <span className="absolute -right-4 top-5 hidden text-gray-400 lg:block"><Icon n="arrow" size={18} /></span>}</div>
               <div className="rounded overflow-hidden bg-[#111a24] text-white">
                 <Img src={`/home/how${i + 1}.jpg`} cls="h-44" />
                 <div className="p-5 flex gap-4"><span className="mt-1"><Icon n={ic as string} size={34} /></span><ul className="space-y-2 text-sm">{(list as string[]).map((x) => <li key={x} className="flex gap-2"><Icon n="check" size={14} />{x}</li>)}</ul></div>
@@ -251,7 +273,7 @@ export default function Home() {
             <h2 className="mt-6 text-[clamp(38px,4.6vw,70px)] leading-[1.05] tracking-tight"><b className="font-extrabold">Is Bauer Painting available for</b><br /><span className="font-light">your project?</span></h2>
             <p className="mt-5 text-lg text-gray-600 max-w-lg leading-relaxed">We provide commercial painting services across the Greater Toronto and Hamilton Area. Enter your postal code to confirm if we service your location.</p>
             <ServiceFinder variant="section" />
-            <p className="mt-5 flex items-center gap-3"><span className="w-10 h-10 rounded-full bg-green-700 text-white flex items-center justify-center"><Icon n="check" size={18} /></span><span><b className="text-green-800 block">We service your area!</b><span className="text-sm text-gray-600">Commercial painting services are available in your location.</span></span></p>
+            <p className="mt-5 flex items-center gap-3"><span className="w-10 h-10 rounded-full bg-[var(--acc)] text-white flex items-center justify-center"><Icon n="check" size={18} /></span><span><b className="text-[var(--acc-d)] block">We service your area!</b><span className="text-sm text-gray-600">Commercial painting services are available in your location.</span></span></p>
           </div>
           <div className="relative min-h-[380px]"><Img src="/home/map.jpg" cls="!absolute inset-0" pos="object-contain object-right" />
             <div className="absolute right-0 bottom-0 bg-[#111a24]/95 text-white p-5 w-56 text-sm hidden lg:block"><p className="text-[10px] tracking-[0.2em] mb-3">OUR SERVICE AREAS</p><ul className="space-y-1.5">{areas.map((a) => <li key={a} className="flex items-center gap-2"><Icon n="pin" size={14} />{a}</li>)}</ul></div></div>
