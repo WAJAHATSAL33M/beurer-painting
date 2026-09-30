@@ -6,6 +6,7 @@ import QuoteSection from "@/components/QuoteSection";
 import Icon from "@/components/Icon";
 import ServiceFinder from "@/components/ServiceFinder";
 import WorkSlider from "@/components/WorkSlider";
+import IndustriesShowcase from "@/components/IndustriesShowcase";
 import { SERVICE_AREA_NAMES } from "@/lib/site-data";
 
 export const metadata = {
@@ -56,8 +57,6 @@ const svcs = [
   ["Exterior Painting", "Durable exterior painting solutions that protect and elevate your property.", ["Retail Storefronts", "Warehouse Siding", "Industrial Buildings", "Shopping Malls & Plazas", "Hotels", "Schools & Educational", "Healthcare Facilities", "Government Buildings", "High-Rises", "Metal Siding & Gutters", "Brick & Masonry", "Structural Steel", "Waterproof Coatings", "Exterior Trim", "Heat Reflective Roof Coatings"], "Exterior"],
   ["Special Services", "Advanced painting and coating solutions for unique commercial needs.", ["Spray Painting Services", "Services for Property Managers", "Eco-Friendly Painting Services", "High-Durability Coatings", "Multi-Unit & Strata Painting", "Pressure Washing & Surface Preparation", "Anti-Graffiti Coatings"], "Special"],
 ];
-const inds = ["Commercial Offices", "Retail Interiors", "Warehouses & Factories", "Healthcare Facilities", "Hotels & Hospitality", "Restaurants", "Schools & Educational", "Government Buildings", "Gyms & Sports Facilities", "Places of Worship", "High-Rises", "Parking Garages"];
-const indIcons = ["building", "home", "grid", "shield", "layers", "dot", "doc", "building", "gear", "home", "building", "grid"];
 const how = [
   ["Plan", "Understand your goals. Build the right plan.", "clip", ["Site assessment", "Understand requirements", "Detailed project planning"]],
   ["Prepare", "Set the stage for a smooth and efficient project.", "roller", ["Surface preparation", "Protect surrounding areas", "Ensure a safe work environment"]],
@@ -171,50 +170,7 @@ export default function Home() {
       </section>
 
       {/* 4 — Industries */}
-      <section className="bg-[#0d1520] text-white reveal">
-        <div className="relative min-h-[460px] overflow-hidden">
-          <Img src="/home/ind-feat.jpg" cls="!absolute inset-y-0 right-0 w-full lg:w-[56%]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0d1520] via-[#0d1520]/90 to-transparent lg:via-[#0d1520]/70" />
-          <div className={`relative ${pad} pt-14 pb-14 lg:pb-56`}>
-            <div className="flex items-start justify-start gap-10">
-              <div className="max-w-[620px]">
-                <p className="hlabel">Industries We Paint</p>
-                <h2 className="mt-8 text-[clamp(36px,4vw,58px)] leading-[1.05] tracking-tight"><b className="font-extrabold">Different Industries.</b><br /><span className="font-light text-white/85">A Higher Standard.</span></h2>
-                <p className="mt-6 text-lg text-white/85 max-w-lg leading-relaxed">From offices and retail spaces to industrial facilities and healthcare buildings, Bauer Painting delivers professional results for a wide range of commercial environments.</p>
-                <Link href="/industries" className="hbtn mt-8">Explore All Industries <Icon n="arrow" size={16} /></Link>
-              </div>
-              <Side dark lines={["SPACES", "PEOPLE", "BUSINESSES", "COMMUNITIES"]} />
-            </div>
-          </div>
-          <div className="absolute inset-y-0 right-0 hidden w-16 flex-col items-center justify-between bg-[#0d1520] py-16 lg:flex">
-            <p className="text-center text-[11px] font-medium leading-7 tracking-[0.24em] text-white/70"><span className="text-[var(--acc)]">01</span><br /><span className="inline-block h-px w-5 bg-[var(--acc)]" /><br /><span className="inline-block h-px w-5 bg-white/50" /><br /><span className="inline-block h-px w-5 bg-white/50" /><br />06</p>
-            <div className="flex flex-col gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/25 text-white"><span className="rotate-180 inline-flex"><Icon n="arrow" size={18} /></span></span>
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-[#0d1520]"><Icon n="arrow" size={18} /></span>
-            </div>
-          </div>
-          <div className="absolute bottom-8 left-6 right-6 hidden max-w-xl items-center gap-6 rounded-lg border border-white/20 bg-white/10 p-6 backdrop-blur-md lg:flex lg:left-[max(2.5rem,calc((100vw-1240px)/2))]">
-            <div>
-              <p className="flex items-center gap-3 text-[10px] font-medium tracking-[0.24em] text-white/70"><span className="h-0.5 w-8 bg-[var(--acc)]" />FEATURED INDUSTRY<span className="h-px flex-1 bg-white/25" /></p>
-              <p className="mt-3 text-2xl font-bold">Commercial Offices</p>
-              <p className="mt-1 text-sm text-white/75">Create productive, professional spaces with high-quality interior painting.</p>
-            </div>
-            <span className="ml-auto flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/70"><Icon n="play" size={20} /></span>
-          </div>
-        </div>
-        <div className={`${pad} py-6 bg-[#F3F4F6] text-white`}>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 reveal-group">
-            {inds.slice(0, 8).map((t, i) => <Tile key={t} i={i} t={t} />)}
-          </div>
-          <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 reveal-group">
-            {inds.slice(8).map((t, i) => <Tile key={t} i={i + 8} t={t} />)}
-            <div className="col-span-2 sm:col-span-4 lg:col-span-4 text-gray-700 flex flex-wrap items-center gap-6 p-4">
-              <div className="flex-1 min-w-[240px]"><p className="hlabel text-xs !tracking-[.16em]">More Industries.<br />Stronger Communities.</p><p className="mt-4 text-sm text-gray-600 leading-relaxed">No matter the industry, our focus remains the same — quality workmanship, efficient execution, and spaces that make a lasting impression.</p></div>
-              <Link href="/industries" className="hghost sm bg-gray-200/70 border-transparent">View All Industries <Icon n="arrow" size={14} /></Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <IndustriesShowcase />
 
       {/* 5 — Our Work */}
       <section className={`${pad} pt-20 bg-[#F3F4F6] reveal`}>
@@ -333,15 +289,5 @@ export default function Home() {
       <QuoteSection />
       <Footer />
     </main>
-  );
-}
-
-function Tile({ i, t }: { i: number; t: string }) {
-  return (
-    <div className={`reveal-item relative h-40 rounded overflow-hidden text-sm font-medium ${i === 0 ? "ring-2 ring-[var(--acc)]" : ""}`}>
-      <Img src={`/home/ind${i + 1}.jpg`} cls="!absolute inset-0" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#111a24] via-[#111a24]/70 to-transparent" />
-      <div className="absolute bottom-3 left-3 right-3"><Icon n={indIcons[i]} size={24} /><p className="mt-2 leading-tight">{t}</p></div>
-    </div>
   );
 }
