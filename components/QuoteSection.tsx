@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Icon from "./Icon";
 import settings from "@/content/settings.json";
+import { SEC } from "@/lib/spacing";
 
 const opts = [
   ["roller", "Interior Painting", "Offices, retail, healthcare, schools, and more."],
@@ -23,7 +24,7 @@ export default function QuoteSection() {
   const [sel, setSel] = useState(0);
   return (
     <section className="grid lg:grid-cols-2">
-      <div className="relative bg-[#0b1118] text-white px-6 lg:pl-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pr-12 py-16 overflow-hidden">
+      <div className={`relative bg-[#0b1118] text-white px-6 lg:pl-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pr-12 ${SEC} overflow-hidden`}>
         <Image src="/home/quote.jpg" alt="" fill className="object-cover object-right opacity-70" sizes="50vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0b1118] via-[#0b1118]/85 to-transparent" />
         <div className="relative max-w-md">
@@ -42,7 +43,7 @@ export default function QuoteSection() {
           <p className="tracking-[0.2em] text-sm">BETTER SPACES.<br />BRIGHTER TOMORROWS.</p>
         </div>
       </div>
-      <div className="bg-[#F8F9FA] px-6 lg:pr-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pl-12 py-16">
+      <div className={`bg-[#F8F9FA] px-6 lg:pr-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pl-12 ${SEC}`}>
         <p className="hlabel text-gray-700">Get Your Quote</p>
         <h3 className="mt-4 text-4xl font-extrabold tracking-tight text-bauer-ink">Tell us about your project.</h3>
         <p className="mt-2 text-gray-500">A few quick details help us understand your needs and provide an accurate quote.</p>

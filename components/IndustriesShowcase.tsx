@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon";
+import { SEC } from "@/lib/spacing";
 
 const pad = "px-6 lg:px-[max(2.5rem,calc((100vw-1240px)/2))]";
 
@@ -120,7 +121,7 @@ export default function IndustriesShowcase() {
       </div>
 
       {/* ---------- tile grid (roomier) ---------- */}
-      <div className={`${pad} py-10 lg:py-14 bg-[#F3F4F6] text-white`}>
+      <div className={`${pad} ${SEC} bg-[#F3F4F6] text-white`}>
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 reveal-group">
           {industries.slice(0, 8).map((ind, i) => (
             <TileButton key={ind.name} index={i} ind={ind} active={i === active} onSelect={() => goTo(i)} />

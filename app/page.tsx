@@ -8,6 +8,7 @@ import ServiceFinder from "@/components/ServiceFinder";
 import WorkSlider from "@/components/WorkSlider";
 import IndustriesShowcase from "@/components/IndustriesShowcase";
 import { SERVICE_AREA_NAMES } from "@/lib/site-data";
+import { SEC, SEC_SM } from "@/lib/spacing";
 
 export const metadata = {
   title: "Bauer Painting | Commercial Painting Experts Since 2001",
@@ -27,7 +28,7 @@ const Side = ({ lines, dark }: { lines: string[]; dark?: boolean }) => (
   </p>
 );
 const Quote = ({ children, right, dark = true, img, cta }: { children: React.ReactNode; right: string[]; dark?: boolean; img?: string; cta?: { label: string; href: string } }) => (
-  <div className={`relative overflow-hidden ${pad} py-10 flex flex-wrap items-center gap-8 ${dark ? "bg-[#151d26] text-white" : "bg-[#e5e7ea] text-bauer-ink"}`}>
+  <div className={`relative overflow-hidden ${pad} ${SEC_SM} flex flex-wrap items-center gap-8 ${dark ? "bg-[#151d26] text-white" : "bg-[#e5e7ea] text-bauer-ink"}`}>
     {img && <><Img src={img} cls="!absolute inset-y-0 right-0 w-full sm:w-[38%]" pos="object-cover object-center" /><div className={`absolute inset-0 ${dark ? "bg-gradient-to-r from-[#151d26] via-[#151d26]/92 to-[#151d26]/30" : "bg-gradient-to-r from-[#e5e7ea] via-[#e5e7ea]/92 to-[#e5e7ea]/30"}`} /></>}
     <div className="relative flex flex-wrap items-center gap-8 flex-1">
       <span className="text-5xl font-serif text-[var(--acc)] leading-none">“</span>
@@ -81,7 +82,7 @@ export default function Home() {
         <Img src="/home/hero.jpg" cls="!absolute inset-y-0 right-0 w-full lg:w-[62%]" pos="object-cover object-right" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a1220] via-[#0a1220]/85 to-[#0a1220]/20" />
         <p className="absolute right-8 top-36 hidden text-right text-[11px] font-medium leading-8 tracking-[0.28em] text-white/70 xl:block">BUILDINGS<br />BUSINESSES<br />BRIGHTER TOMORROWS<span className="ml-auto mt-3 block h-0.5 w-9 bg-[var(--acc)]" /></p>
-        <div className={`relative ${pad} pt-20 pb-14`}>
+        <div className={`relative ${pad} pt-20 sm:pt-24 pb-16 lg:pb-20`}>
           <p className="hlabel">Commercial Painting Experts Since 2001</p>
           <h1 className={`${HL} mt-8 text-[clamp(48px,6.4vw,100px)] uppercase max-w-[900px]`}>Spaces<br />That Work<br />Harder<Dot /></h1>
           <span className="block w-10 h-px bg-white/70 my-6" />
@@ -97,7 +98,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className={`${pad} py-8 bg-[#F6F7F9] flex flex-wrap items-center gap-x-12 gap-y-4`}>
+      <div className={`${pad} py-10 bg-[#F6F7F9] flex flex-wrap items-center gap-x-12 gap-y-4`}>
         <p className="text-xs font-bold tracking-widest text-gray-700">TRUSTED BY<br />LEADING BUSINESSES</p>
         {brands.map(([b, cls]) => <span key={b} className={`text-2xl text-gray-500 ${cls}`}>{b}</span>)}
         <span className="hidden h-10 w-px bg-gray-300 sm:block" />
@@ -107,7 +108,7 @@ export default function Home() {
       {/* 2 — Built for commercial */}
       <section className="bg-[#EBECEE] reveal">
         <div className="grid lg:grid-cols-[1.35fr_1fr]">
-          <div className={`relative ${pad} lg:pr-10 py-20`}>
+          <div className={`relative ${pad} lg:pr-10 ${SEC}`}>
             <p className="hlabel text-gray-700">Built for Commercial Projects</p>
             <p className="script pointer-events-none absolute right-4 top-60 hidden -rotate-6 text-right text-[34px] leading-[1.15] text-[var(--acc-d)] xl:block">More<br />Than<br />Paint.</p>
             <h2 className="mt-8 text-[clamp(36px,4.2vw,64px)] leading-[1.05] tracking-tight"><b className="font-extrabold">Painting is the finish.</b><br /><span className="font-light">Planning is what makes the project work.</span></h2>
@@ -129,7 +130,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={`${pad} py-12 bg-[#F0F0F1] grid sm:grid-cols-2 lg:grid-cols-4 gap-8 reveal-group`}>
+        <div className={`${pad} ${SEC_SM} bg-[#F0F0F1] grid sm:grid-cols-2 lg:grid-cols-4 gap-8 reveal-group`}>
           {why4.map(([ic, t, d], i) => (
             <div key={t} className="reveal-item flex gap-4 lg:border-l lg:border-gray-300 lg:pl-6 lg:first:border-0 lg:first:pl-0">
               <div><p className="text-3xl font-bold text-gray-400">{`0${i + 1}`}</p><span className="block w-9 h-px bg-gray-400 mt-2" /></div>
@@ -141,7 +142,7 @@ export default function Home() {
       </section>
 
       {/* 3 — What we do */}
-      <section className={`${pad} py-20 bg-[#F1F2F4] reveal`}>
+      <section className={`${pad} ${SEC} bg-[#F1F2F4] reveal`}>
         <p className="hlabel text-gray-700">What We Do</p>
         <div className="mt-6 flex flex-wrap justify-between gap-8 items-end">
           <h2 className="text-[clamp(36px,4.4vw,68px)] leading-[1.05] tracking-tight"><b className="font-extrabold">One painting partner.</b><br /><span className="font-light">Every surface that matters.</span></h2>
@@ -173,7 +174,7 @@ export default function Home() {
       <IndustriesShowcase />
 
       {/* 5 — Our Work */}
-      <section className={`${pad} pt-20 bg-[#F3F4F6] reveal`}>
+      <section className={`${pad} pt-16 sm:pt-20 lg:pt-24 bg-[#F3F4F6] reveal`}>
         <p className="hlabel text-gray-700">Our Work</p>
         <div className="mt-6 flex flex-wrap justify-between gap-8">
           <div className="max-w-xl">
@@ -194,7 +195,7 @@ export default function Home() {
         <div className="relative overflow-hidden">
           <Img src="/home/how-top.jpg" cls="!absolute inset-y-0 right-0 w-full lg:w-[30%]" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#F3F4F6] via-[#F3F4F6]/90 to-transparent" />
-          <div className={`relative ${pad} py-16`}>
+          <div className={`relative ${pad} ${SEC}`}>
             <div className="flex items-start justify-between gap-10">
               <div>
                 <p className="hlabel text-gray-700">How We Work</p>
@@ -205,7 +206,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={`${pad} py-10 bg-[#F8F8F9] grid sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal-group`}>
+        <div className={`${pad} ${SEC_SM} bg-[#F8F8F9] grid sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal-group`}>
           {how.map(([t, d, ic, list], i) => (
             <div key={t as string} className="reveal-item">
               <div className="relative flex gap-3 mb-5"><div><p className="text-4xl font-bold text-gray-400">{`0${i + 1}`}</p><span className="block w-10 h-0.5 bg-[var(--acc)] mt-1" /></div><div><p className="font-bold tracking-wide uppercase">{t as string}</p><p className="text-sm text-gray-600 leading-snug">{d as string}</p></div>{i < 3 && <span className="absolute -right-4 top-5 hidden text-gray-400 lg:block"><Icon n="arrow" size={18} /></span>}</div>
@@ -219,7 +220,7 @@ export default function Home() {
         <div className="relative overflow-hidden bg-[#111a24] text-white">
           <Img src="/home/why-bg.jpg" cls="!absolute inset-y-0 left-0 w-full sm:w-[30%]" pos="object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#111a24]/60 via-[#111a24] to-[#3a4450]" />
-          <div className={`${pad} relative py-12 flex flex-wrap items-center justify-end gap-10`}>
+          <div className={`${pad} relative ${SEC_SM} flex flex-wrap items-center justify-end gap-10`}>
             <p className="font-serif italic text-2xl max-w-md"><span className="text-4xl text-[var(--acc)] not-italic mr-3">“</span>A well-managed project leads to spaces that work harder for your business.</p>
             <p className="border-l border-white/30 pl-8 text-xs tracking-[0.2em]">BUILT FOR<br />WHAT&apos;S NEXT.</p>
             <Link href="/contact" className="hbtn">Start Your Project <Icon n="arrow" size={16} /></Link>
@@ -229,7 +230,7 @@ export default function Home() {
 
       {/* 7 — Service area */}
       <section className="relative bg-[#F3F4F6] reveal">
-        <div className={`${pad} pt-20 pb-72 grid lg:grid-cols-2 gap-8`}>
+        <div className={`${pad} pt-16 sm:pt-20 lg:pt-24 pb-72 grid lg:grid-cols-2 gap-8`}>
           <div className="relative z-10 min-w-0">
             <p className="hlabel text-gray-700">Our Service Area</p>
             <h2 className="mt-6 text-[clamp(38px,4.6vw,70px)] leading-[1.05] tracking-tight"><b className="font-extrabold">Is Bauer Painting available for</b><br /><span className="font-light">your project?</span></h2>
@@ -244,13 +245,13 @@ export default function Home() {
             <div className="absolute right-0 bottom-0 bg-[#111a24]/95 text-white p-5 w-56 text-sm hidden lg:block"><p className="text-[10px] tracking-[0.2em] mb-3">OUR SERVICE AREAS</p><ul className="space-y-1.5">{areas.map((a) => <li key={a} className="flex items-center gap-2"><Icon n="pin" size={14} />{a}</li>)}</ul></div></div>
         </div>
         <Img src="/home/skyline.jpg" cls="!absolute left-0 right-0 bottom-32 h-52 opacity-90" pos="object-cover object-bottom" />
-        <div className={`relative ${pad} py-9 bg-[#111a24] text-white grid sm:grid-cols-2 lg:grid-cols-4 gap-8`}>
+        <div className={`relative ${pad} ${SEC_SM} bg-[#111a24] text-white grid sm:grid-cols-2 lg:grid-cols-4 gap-8`}>
           {[["pin", "LOCAL EXPERTISE", "We understand the unique needs of commercial properties in your area."], ["clock", "RELIABLE SERVICE", "On time, on schedule, and ready when you are."], ["users", "SUPPORTING LOCAL BUSINESSES", "Proud to work with businesses across our communities."], ["building", "BIGGER SPACES. BRIGHTER TOMORROWS.", ""]].map(([ic, t, d]) => <div key={t} className="flex gap-4 lg:border-l lg:border-white/20 lg:pl-6 lg:first:border-0"><Icon n={ic} size={32} /><div><p className="text-xs tracking-[0.18em] font-medium">{t}</p><p className="text-sm text-white/70 mt-2">{d}</p></div></div>)}
         </div>
       </section>
 
       {/* 8 — Why choose */}
-      <section className={`${pad} py-20 bg-[#F3F4F6] reveal`}>
+      <section className={`${pad} ${SEC} bg-[#F3F4F6] reveal`}>
         <div className="flex items-start justify-between gap-10">
           <div>
             <p className="hlabel text-gray-700">Why Choose Bauer</p>
