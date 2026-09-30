@@ -11,3 +11,4 @@ npm-debug.log*
 .env.*.local
 # build-generated (decoded from *.jpg.b64 by scripts/restore-images.mjs)
 public/about/*.jpg
+public/contact/*.jpg
