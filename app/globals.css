@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  color: #101828;
+  background: #ffffff;
+}
+
+/* ==========================================================================
+   Brand accent — WhatsApp-style green (#25D366), per the design spec.
+   Everything reads from these two variables, so the whole site re-themes
+   from one place. Add class "theme-red" on <main> to preview the earlier
+   red exploration; it is not used anywhere by default.
+   ========================================================================== */
+:root {
+  --acc: #25d366;
+  --acc-d: #1da851;
+}
+.theme-red {
+  --acc: #dc2626;
+  --acc-d: #b91c1c;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #667085;
+}
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--acc);
+  display: inline-block;
+}
+
+.dot {
+  color: var(--acc);
+}
+
+/* ---------- Buttons ----------
+   Minimal corner radius (no SaaS-style pill/rounded-xl buttons), a quick
+   fill/border transition on hover, the CTA arrow nudges right, and a small
+   press scale-down — matches the "Button Interaction" spec (150–250ms). */
+.btn-primary,
+.hbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--acc);
+  color: white;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 4px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.btn-primary:hover,
+.hbtn:hover {
+  background: var(--acc-d);
+}
+.btn-primary:active,
+.hbtn:active {
+  transform: scale(0.97);
+}
+
+.btn-outline,
+.hghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d0d5dd;
+  color: #101828;
+  font-weight: 600;
+  padding: 13px 24px;
+  border-radius: 4px;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+}
+.btn-outline:hover,
+.hghost:hover {
+  border-color: var(--acc);
+}
+.btn-outline:active,
+.hghost:active {
+  transform: scale(0.97);
+}
+
+.btn-primary svg,
+.btn-outline svg,
+.hbtn svg,
+.hghost svg {
+  transition: transform 0.2s ease;
+}
+.btn-primary:hover svg,
+.btn-outline:hover svg,
+.hbtn:hover svg,
+.hghost:hover svg {
+  transform: translateX(3px);
+}
+
+/* Our Process page — closer to design */
+.proc .eyebrow{color:#8F8FB0;font-size:13px;font-weight:700;letter-spacing:.06em}
+.proc .eyebrow::before{width:50px;background:var(--acc)}
+.proc .btn-primary{background:var(--acc);border-radius:3px;padding:16px 36px;font-weight:500;font-size:16px}
+.proc .btn-primary:hover{background:var(--acc-d)}
+.proc .btn-outline{border:1px solid #0D1B2A;border-radius:3px;padding:15px 30px;font-weight:500;font-size:16px;background:transparent}
+.proc .btn-outline:hover{background:#0D1B2A;color:#fff;border-color:#0D1B2A}
+
+.hbtn{border-radius:3px;padding:15px 30px;font-weight:500}
+.hghost{border-radius:3px;padding:14px 28px;font-weight:500;border:1px solid #0D1B2A;color:#0D1B2A}
+.hghost.on-dark{border-color:rgba(255,255,255,.7);color:#fff}
+.hbtn.sm,.hghost.sm{padding:11px 20px;font-size:14px}
+.hlabel{display:flex;align-items:center;gap:14px;font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
+.hlabel::before{content:"";width:36px;height:2px;background:var(--acc)}
+
+/* ==========================================================================
+   Global animation primitives (see Bauer motion spec, section 13).
+   Everything here respects prefers-reduced-motion by disabling motion
+   entirely rather than just speeding it up.
+   ========================================================================== */
+
+/* A. Standard section reveal — opacity 0→1 with a small upward move,
+   triggered by ScrollReveal.tsx once ~15–20% of the element is in view. */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+.reveal.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* B. Staggered content reveal — apply "reveal-group" to the parent and
+   "reveal-item" to each card/row; ScrollReveal.tsx staggers them ~70ms apart. */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  will-change: opacity, transform;
+}
+.reveal-item.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* C. Image reveal — container fades/slides in, image scales down slightly
+   from inside it. Apply "reveal-image" to the relative wrapper. */
+.reveal-image {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-image.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-image img {
+  transform: scale(1.04);
+  transition: transform 0.8s ease;
+}
+.reveal-image.reveal-in img {
+  transform: scale(1);
+}
+
+/* Service-finder popup: backdrop fade + modal scale-in, with its content
+   staggered (status → info → actions) once the modal is open. */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.modal-reveal > * {
+  opacity: 0;
+  animation: fadeUp 0.35s ease-out forwards;
+}
+.modal-reveal > *:nth-child(1) { animation-delay: .02s; }
+.modal-reveal > *:nth-child(2) { animation-delay: .08s; }
+.modal-reveal > *:nth-child(3) { animation-delay: .16s; }
+.modal-reveal > *:nth-child(4) { animation-delay: .24s; }
+.modal-reveal > *:nth-child(5) { animation-delay: .32s; }
+.modal-reveal > *:nth-child(6) { animation-delay: .38s; }
+
+/* F. Navigation — header tightens up and gains a solid edge once the page
+   has scrolled a little; toggled by Header.tsx adding "is-scrolled". */
+header.site-header {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+header.site-header .header-bar {
+  transition: height 0.25s ease;
+}
+header.site-header.is-scrolled .header-bar {
+  height: 4.5rem;
+}
+header.site-header.is-scrolled {
+  box-shadow: 0 1px 0 rgba(16, 24, 40, 0.06), 0 4px 16px rgba(16, 24, 40, 0.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .reveal-item, .reveal-image, .reveal-image img {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .modal-reveal > * {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  .btn-primary, .btn-outline, .hbtn, .hghost,
+  .btn-primary svg, .btn-outline svg, .hbtn svg, .hghost svg,
+  header.site-header, header.site-header .header-bar {
+    transition: none !important;
+  }
+}

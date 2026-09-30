@@ -1,0 +1,262 @@
+{
+  "services": [
+    {
+      "slug": "spray-painting",
+      "label": "Spray Painting Services",
+      "icon": "spray",
+      "image": "/process/execute.jpg",
+      "cardBlurb": "Professional spray application for a smooth, high-quality finish on a variety of surfaces.",
+      "description": "Efficient, even spray application for large commercial spaces and specialized surfaces, with fast coverage and a consistent finish.",
+      "highlights": [
+        "Fast Coverage",
+        "Even, Consistent Finish",
+        "Ideal for Large Areas"
+      ],
+      "overview": "Spray application covers big areas quickly and gives a uniform finish on surfaces that are slow to roll or brush, such as exposed ceilings, block walls, steel, pipe and metal cladding. Careful masking and protection keep overspray where it belongs, and the speed shortens the time your space is disrupted.",
+      "includes": [
+        "Exposed Ceilings & Decks",
+        "Block & Concrete Walls",
+        "Metal Cladding & Steel",
+        "Pipes & Conduit",
+        "Large Open Areas",
+        "Doors, Frames & Fixtures"
+      ],
+      "faqs": [
+        {
+          "q": "When is spray painting the right option?",
+          "a": "It suits large areas, textured or irregular surfaces and exposed structures where speed and a uniform finish matter. We recommend rolling or brushing where it gives a better result."
+        },
+        {
+          "q": "How do I get started?",
+          "a": "Request a quote or call us. We arrange a site visit, review your surfaces, access and schedule, then send a clear, detailed quote with no obligation."
+        }
+      ]
+    },
+    {
+      "slug": "property-manager-services",
+      "label": "Services for Property Managers",
+      "icon": "users",
+      "image": "/home/how1.jpg",
+      "cardBlurb": "Reliable support for property managers, with flexible scheduling and clear communication.",
+      "description": "Dependable painting support for property managers, with flexible scheduling, clear communication and one accountable team across your portfolio.",
+      "highlights": [
+        "One Point of Contact",
+        "Tenant-Friendly Scheduling",
+        "Portfolio Support"
+      ],
+      "overview": "Managing tenants, budgets and contractors takes time. We make painting one less thing to chase: clear scopes and quotes, schedules that respect tenants, tidy job sites and consistent communication from the first visit to the final walkthrough, whether you manage one building or many.",
+      "includes": [
+        "Suite Turnovers",
+        "Common Areas & Corridors",
+        "Lobbies & Amenity Spaces",
+        "Exterior Refreshes",
+        "Phased Multi-Building Plans",
+        "Ongoing Maintenance Repaints"
+      ],
+      "faqs": [
+        {
+          "q": "Do you work with property managers?",
+          "a": "Yes. We regularly work with property managers and owners, including portfolios, and can plan phased and repeat work around tenant needs."
+        },
+        {
+          "q": "How do I get started?",
+          "a": "Request a quote or call us. We arrange a site visit, review your surfaces, access and schedule, then send a clear, detailed quote with no obligation."
+        }
+      ]
+    },
+    {
+      "slug": "eco-friendly-painting",
+      "label": "Eco-Friendly Painting Services",
+      "icon": "leaf",
+      "image": "/home/why2.jpg",
+      "cardBlurb": "Low-VOC, environmentally responsible solutions for healthier spaces.",
+      "description": "Low-VOC, low-odour painting solutions that help keep occupied commercial spaces healthier and more comfortable.",
+      "highlights": [
+        "Low-VOC Products",
+        "Low-Odour Options",
+        "Healthier Spaces"
+      ],
+      "overview": "Low-VOC and low-odour coatings reduce fumes during and after painting, which matters in occupied offices, schools, healthcare and hospitality spaces. We help you choose products that meet your performance needs and air-quality goals, and plan ventilation and scheduling to match.",
+      "includes": [
+        "Low-VOC Interior Paints",
+        "Low-Odour Primers",
+        "Occupied Offices",
+        "Schools & Childcare",
+        "Healthcare Spaces",
+        "Ventilation Planning"
+      ],
+      "faqs": [
+        {
+          "q": "Do you provide eco-friendly painting solutions?",
+          "a": "Yes. We offer low-VOC and low-odour options for most interior projects and can advise on the best product for your surfaces and use."
+        },
+        {
+          "q": "How do I get started?",
+          "a": "Request a quote or call us. We arrange a site visit, review your surfaces, access and schedule, then send a clear, detailed quote with no obligation."
+        }
+      ]
+    },
+    {
+      "slug": "high-durability-coatings",
+      "label": "High-Durability Coatings",
+      "icon": "shield",
+      "image": "/home/work5.jpg",
+      "cardBlurb": "Tough, long-lasting coatings designed for high-traffic and demanding environments.",
+      "description": "Tough, long-lasting coating systems designed for high-traffic areas and demanding commercial and industrial environments.",
+      "highlights": [
+        "Impact & Wear Resistant",
+        "Easy to Clean",
+        "Long Service Life"
+      ],
+      "overview": "Corridors, loading areas, warehouses, washrooms and kitchens take constant abuse. High-durability coatings resist scuffs, moisture, chemicals and cleaning, so surfaces stay intact longer and repaint cycles stretch out. We match the system to the substrate and the wear it will see.",
+      "includes": [
+        "High-Traffic Corridors",
+        "Warehouse Floors & Walls",
+        "Washrooms & Kitchens",
+        "Loading Docks",
+        "Stairwells",
+        "Industrial Equipment Areas"
+      ],
+      "faqs": [
+        {
+          "q": "What are high-durability coatings used for?",
+          "a": "They protect surfaces exposed to heavy use, moisture, cleaning or impact, such as corridors, industrial spaces, washrooms and loading areas."
+        },
+        {
+          "q": "How do I get started?",
+          "a": "Request a quote or call us. We arrange a site visit, review your surfaces, access and schedule, then send a clear, detailed quote with no obligation."
+        }
+      ]
+    },
+    {
+      "slug": "multi-unit-strata-painting",
+      "label": "Multi-Unit & Strata Painting",
+      "icon": "building",
+      "image": "/home/ind11.jpg",
+      "cardBlurb": "Efficient, coordinated painting solutions for multi-unit residential and strata properties.",
+      "description": "Coordinated painting for condominiums, apartments and strata properties, planned around residents and board requirements.",
+      "highlights": [
+        "Resident Communication",
+        "Phased Scheduling",
+        "Board-Ready Quotes"
+      ],
+      "overview": "Multi-unit projects involve many stakeholders. We plan work in phases, communicate with residents and managers, and provide clear scopes and quotes that boards and councils can review, for common areas, exteriors, parkades and amenity spaces.",
+      "includes": [
+        "Corridors & Lobbies",
+        "Building Exteriors",
+        "Balconies & Railings",
+        "Parking Structures",
+        "Amenity Rooms",
+        "Stairwells"
+      ],
+      "faqs": [
+        {
+          "q": "Do you work on multi-unit and strata properties?",
+          "a": "Yes. We paint condominiums, apartments and strata properties, and can provide documentation and phased plans for boards and property managers."
+        },
+        {
+          "q": "How do I get started?",
+          "a": "Request a quote or call us. We arrange a site visit, review your surfaces, access and schedule, then send a clear, detailed quote with no obligation."
+        }
+      ]
+    },
+    {
+      "slug": "pressure-washing-surface-preparation",
+      "label": "Pressure Washing & Surface Preparation",
+      "icon": "drop",
+      "image": "/process/prepare.jpg",
+      "cardBlurb": "Thorough cleaning and preparation to ensure optimal coating adhesion and long-lasting results.",
+      "description": "Thorough cleaning, repair and preparation so coatings bond properly and last, on interior and exterior surfaces.",
+      "highlights": [
+        "Better Adhesion",
+        "Longer-Lasting Finish",
+        "Repairs Included"
+      ],
+      "overview": "Most paint failures start with poor preparation. We clean surfaces, remove loose or failing coatings, repair cracks and damage, and prime where needed, so the finish coat adheres and performs as it should. Pressure washing removes dirt, chalking and growth from exterior surfaces before painting.",
+      "includes": [
+        "Pressure Washing",
+        "Scraping & Sanding",
+        "Crack & Surface Repair",
+        "Priming & Sealing",
+        "Mould & Mildew Treatment",
+        "Masking & Protection"
+      ],
+      "faqs": [
+        {
+          "q": "What types of surfaces can be pressure washed or prepared?",
+          "a": "Most exterior surfaces, including masonry, metal, concrete and many cladding types. We check the substrate first and choose a method that will not damage it."
+        },
+        {
+          "q": "How do I get started?",
+          "a": "Request a quote or call us. We arrange a site visit, review your surfaces, access and schedule, then send a clear, detailed quote with no obligation."
+        }
+      ]
+    },
+    {
+      "slug": "anti-graffiti-coatings",
+      "label": "Anti-Graffiti Coatings",
+      "icon": "roller",
+      "image": "/home/how-top.jpg",
+      "cardBlurb": "Protective coatings that make it easier to remove graffiti and maintain a clean appearance.",
+      "description": "Protective coatings that make graffiti easier to remove and help keep your property looking clean.",
+      "highlights": [
+        "Easier Graffiti Removal",
+        "Protects the Substrate",
+        "Lower Repeat Costs"
+      ],
+      "overview": "Anti-graffiti coatings create a barrier so paint and markers can be cleaned off without damaging the surface underneath. They suit walls, fences, loading areas, transit-facing facades and other vandal-prone locations, and can cut the cost and disruption of repeated repainting.",
+      "includes": [
+        "Exterior Walls",
+        "Fences & Barriers",
+        "Loading Docks",
+        "Underpasses & Alcoves",
+        "Signage Surrounds",
+        "Street-Facing Facades"
+      ],
+      "faqs": [
+        {
+          "q": "Do you offer anti-graffiti coatings?",
+          "a": "Yes. We apply protective coatings to vandal-prone surfaces and can advise on the right system for your substrate and location."
+        },
+        {
+          "q": "How do I get started?",
+          "a": "Request a quote or call us. We arrange a site visit, review your surfaces, access and schedule, then send a clear, detailed quote with no obligation."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What specialty painting services do you provide?",
+      "a": "Spray painting, services for property managers, eco-friendly painting, high-durability coatings, multi-unit and strata painting, pressure washing and surface preparation, and anti-graffiti coatings."
+    },
+    {
+      "q": "When is spray painting the right option?",
+      "a": "For large areas, exposed structures and textured or irregular surfaces where speed and a uniform finish matter."
+    },
+    {
+      "q": "What types of surfaces can be pressure washed or prepared?",
+      "a": "Most exterior surfaces, including masonry, metal, concrete and many cladding types. We check the substrate first and choose a suitable method."
+    },
+    {
+      "q": "What are high-durability coatings used for?",
+      "a": "Surfaces that face heavy use, moisture, cleaning or impact, such as corridors, warehouses, washrooms and loading areas."
+    },
+    {
+      "q": "Do you work with property managers?",
+      "a": "Yes, on single buildings and portfolios, with flexible scheduling and clear communication."
+    },
+    {
+      "q": "Do you provide eco-friendly painting solutions?",
+      "a": "Yes. Low-VOC and low-odour options are available for most interior projects."
+    },
+    {
+      "q": "Do you offer anti-graffiti coatings?",
+      "a": "Yes. We apply protective coatings that make graffiti easier to remove from vandal-prone surfaces."
+    },
+    {
+      "q": "Do you work on multi-unit and strata properties?",
+      "a": "Yes, including condominiums, apartments and strata properties, with phased plans and board-ready quotes."
+    }
+  ]
+}
