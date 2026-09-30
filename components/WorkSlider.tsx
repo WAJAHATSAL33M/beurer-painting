@@ -1,1 +1,116 @@
-InVzZSBjbGllbnQiOwoKaW1wb3J0IHsgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCBJbWFnZSBmcm9tICJuZXh0L2ltYWdlIjsKaW1wb3J0IEljb24gZnJvbSAiQC9jb21wb25lbnRzL0ljb24iOwoKY29uc3QgVEFCUyA9IFsiQWxsIFByb2plY3RzIiwgIkludGVyaW9yIiwgIkV4dGVyaW9yIiwgIkluZHVzdHJpYWwiLCAiQ29tbWVyY2lhbCIsICJDb2F0aW5ncyJdOwoKdHlwZSBQID0geyBpbWc6IHN0cmluZzsgdGFnOiBzdHJpbmc7IHRpdGxlOiBzdHJpbmc7IGxvYzogc3RyaW5nOyBjYXQ6IHN0cmluZyB9OwoKY29uc3QgUFJPSkVDVFM6IFBbXSA9IFsKICB7IGltZzogIndvcmsxIiwgdGFnOiAiRmVhdHVyZWQgUHJvamVjdCIsIHRpdGxlOiAiQ29ycG9yYXRlIE9mZmljZSBSZW5vdmF0aW9uIiwgbG9jOiAiTWlzc2lzc2F1Z2EsIE9OIiwgY2F0OiAiQ29tbWVyY2lhbCBPZmZpY2UiIH0sCiAgeyBpbWc6ICJ3b3JrMiIsIHRhZzogIkV4dGVyaW9yIFBhaW50aW5nIiwgdGl0bGU6ICJJbmR1c3RyaWFsIEZhY2lsaXR5IiwgbG9jOiAiQnVybGluZ3RvbiwgT04iLCBjYXQ6ICJJbmR1c3RyaWFsIiB9LAogIHsgaW1nOiAid29yazMiLCB0YWc6ICJJbnRlcmlvciBQYWludGluZyIsIHRpdGxlOiAiSGVhbHRoY2FyZSBGYWNpbGl0eSIsIGxvYzogIkhhbWlsdG9uLCBPTiIsIGNhdDogIkhlYWx0aGNhcmUiIH0sCiAgeyBpbWc6ICJ3b3JrNCIsIHRhZzogIkNvbW1lcmNpYWwgSW50ZXJpb3IiLCB0aXRsZTogIlJldGFpbCBTdG9yZWZyb250IiwgbG9jOiAiT2FrdmlsbGUsIE9OIiwgY2F0OiAiUmV0YWlsIiB9LAogIHsgaW1nOiAid29yazUiLCB0YWc6ICJIaWdoLUR1cmFiaWxpdHkgQ29hdGluZ3MiLCB0aXRsZTogIldhcmVob3VzZSBGYWNpbGl0eSIsIGxvYzogIlRvcm9udG8sIE9OIiwgY2F0OiAiSW5kdXN0cmlhbCIgfSwKXTsKCi8vIFdoaWNoIHByb2plY3RzIChieSBpbmRleCkgYmVsb25nIHRvIGVhY2ggdGFiLiBGaXJzdCBlbnRyeSBpcyB0aGUgbGFyZ2UgZmVhdHVyZSBjYXJkLgpjb25zdCBUQUJfUFJPSkVDVFM6IG51bWJlcltdW10gPSBbCiAgWzAsIDEsIDIsIDMsIDRdLCAvLyBBbGwgUHJvamVjdHMKICBbMiwgMCwgM10sICAgICAgIC8vIEludGVyaW9yCiAgWzEsIDRdLCAgICAgICAgICAvLyBFeHRlcmlvcgogIFsxLCA0XSwgICAgICAgICAgLy8gSW5kdXN0cmlhbAogIFswLCAyLCAzXSwgICAgICAgLy8gQ29tbWVyY2lhbAogIFs0XSwgICAgICAgICAgICAgLy8gQ29hdGluZ3MKXTsKCmNvbnN0IEltZyA9ICh7IHNyYywgYWx0ID0gIiIsIGNscyA9ICIiIH06IHsgc3JjOiBzdHJpbmc7IGFsdD86IHN0cmluZzsgY2xzPzogc3RyaW5nIH0pID0+ICgKICA8ZGl2IGNsYXNzTmFtZT17YHJlbGF0aXZlIG92ZXJmbG93LWhpZGRlbiAke2Nsc31gfT4KICAgIDxJbWFnZSBzcmM9e3NyY30gYWx0PXthbHR9IGZpbGwgY2xhc3NOYW1lPSJvYmplY3QtY292ZXIiIHNpemVzPSIobWluLXdpZHRoOjEwMjRweCkgMzN2dywgMTAwdnciIC8+CiAgPC9kaXY+Cik7CgpmdW5jdGlvbiBDYXJkTWV0YSh7IHAsIGJpZyA9IGZhbHNlIH06IHsgcDogUDsgYmlnPzogYm9vbGVhbiB9KSB7CiAgcmV0dXJuICgKICAgIDw+CiAgICAgIDxkaXYgY2xhc3NOYW1lPXtgYWJzb2x1dGUgJHtiaWcgPyAidG9wLTUgbGVmdC01IiA6ICJ0b3AtNCBsZWZ0LTQifSBobGFiZWwgJHtiaWcgPyAidGV4dC1bMTFweF0iIDogInRleHQtWzEwcHhdIn1gfT57cC50YWd9PC9kaXY+CiAgICAgIDxkaXYgY2xhc3NOYW1lPXtgYWJzb2x1dGUgJHtiaWcgPyAiYm90dG9tLTUgbGVmdC01IHJpZ2h0LTUiIDogImJvdHRvbS00IGxlZnQtNCByaWdodC00In1gfT4KICAgICAgICA8aDMgY2xhc3NOYW1lPXtgJHtiaWcgPyAidGV4dC0zeGwgbGVhZGluZy10aWdodCIgOiAidGV4dC14bCJ9IGZvbnQtYm9sZGB9PntwLnRpdGxlfTwvaDM+CiAgICAgICAgPHAgY2xhc3NOYW1lPXtgbXQtMiAke2JpZyA/ICJ0ZXh0LXNtIiA6ICJ0ZXh0LXhzIn0gZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIGdhcC0yYH0+CiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0zIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMSI+PEljb24gbj0icGluIiBzaXplPXtiaWcgPyAxNCA6IDEyfSAvPntwLmxvY308L3NwYW4+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTEiPjxJY29uIG49ImJ1aWxkaW5nIiBzaXplPXtiaWcgPyAxNCA6IDEyfSAvPntwLmNhdH08L3NwYW4+CiAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9IndoaXRlc3BhY2Utbm93cmFwIj5WaWV3IFByb2plY3Qg4oaSPC9zcGFuPgogICAgICAgIDwvcD4KICAgICAgPC9kaXY+CiAgICA8Lz4KICApOwp9CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBXb3JrU2xpZGVyKCkgewogIGNvbnN0IFt0YWIsIHNldFRhYl0gPSB1c2VTdGF0ZSgwKTsKICBjb25zdCBnbyA9IChkaXI6IG51bWJlcikgPT4gc2V0VGFiKCh0KSA9PiAodCArIGRpciArIFRBQlMubGVuZ3RoKSAlIFRBQlMubGVuZ3RoKTsKCiAgcmV0dXJuICgKICAgIDxkaXY+CiAgICAgIHsvKiBUYWJzICsgYXJyb3dzICovfQogICAgICA8ZGl2IGNsYXNzTmFtZT0ibXQtOCBmbGV4IGZsZXgtd3JhcCBpdGVtcy1jZW50ZXIgZ2FwLTQiPgogICAgICAgIDxkaXYgcm9sZT0idGFibGlzdCIgYXJpYS1sYWJlbD0iRmlsdGVyIHByb2plY3RzIiBjbGFzc05hbWU9ImZsZXggZmxleC0xIGZsZXgtd3JhcCB0ZXh0LXNtIGJvcmRlciBib3JkZXItZ3JheS0yMDAgYmctd2hpdGUgcm91bmRlZC1zbSBvdmVyZmxvdy1oaWRkZW4iPgogICAgICAgICAge1RBQlMubWFwKChmLCBpKSA9PiAoCiAgICAgICAgICAgIDxidXR0b24KICAgICAgICAgICAgICBrZXk9e2Z9CiAgICAgICAgICAgICAgcm9sZT0idGFiIgogICAgICAgICAgICAgIGFyaWEtc2VsZWN0ZWQ9e3RhYiA9PT0gaX0KICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRUYWIoaSl9CiAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgcmVsYXRpdmUgcHgtNSBweS0zLjUgdHJhbnNpdGlvbi1jb2xvcnMgJHt0YWIgPT09IGkgPyAiYmctWyMxMTFhMjRdIHRleHQtd2hpdGUgZm9udC1tZWRpdW0iIDogInRleHQtZ3JheS03MDAgaG92ZXI6dGV4dC1ibGFjayJ9YH0KICAgICAgICAgICAgPgogICAgICAgICAgICAgIHtmfQogICAgICAgICAgICAgIHt0YWIgPT09IGkgJiYgPHNwYW4gY2xhc3NOYW1lPSJhYnNvbHV0ZSBib3R0b20tMCBsZWZ0LTUgcmlnaHQtNSBoLTAuNSBiZy1bdmFyKC0tYWNjKV0iIC8+fQogICAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICAgICkpfQogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyI+CiAgICAgICAgICA8YnV0dG9uIG9uQ2xpY2s9eygpID0+IGdvKC0xKX0gYXJpYS1sYWJlbD0iUHJldmlvdXMgY2F0ZWdvcnkiIGNsYXNzTmFtZT0iZmxleCBoLTEyIHctMTIgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHJvdW5kZWQtZnVsbCBiZy1ncmF5LTMwMCB0ZXh0LXdoaXRlIHRyYW5zaXRpb24gaG92ZXI6YmctZ3JheS00MDAiPgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InJvdGF0ZS0xODAgaW5saW5lLWZsZXgiPjxJY29uIG49ImFycm93IiBzaXplPXsxOH0gLz48L3NwYW4+CiAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICAgIDxidXR0b24gb25DbGljaz17KCkgPT4gZ28oMSl9IGFyaWEtbGFiZWw9Ik5leHQgY2F0ZWdvcnkiIGNsYXNzTmFtZT0iZmxleCBoLTEyIHctMTIgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHJvdW5kZWQtZnVsbCBiZy1bIzExMWEyNF0gdGV4dC13aGl0ZSB0cmFuc2l0aW9uIGhvdmVyOmJnLWJsYWNrIj4KICAgICAgICAgICAgPEljb24gbj0iYXJyb3ciIHNpemU9ezE4fSAvPgogICAgICAgICAgPC9idXR0b24+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgoKICAgICAgey8qIFNsaWRpbmcgdmlld3BvcnQg4oCUIG9uZSBzbGlkZSBwZXIgdGFiICovfQogICAgICA8ZGl2IGNsYXNzTmFtZT0ibXQtNSBvdmVyZmxvdy1oaWRkZW4iPgogICAgICAgIDxkaXYKICAgICAgICAgIGNsYXNzTmFtZT0iZmxleCB0cmFuc2l0aW9uLXRyYW5zZm9ybSBkdXJhdGlvbi03MDAgZWFzZS1bY3ViaWMtYmV6aWVyKDAuMjIsMSwwLjM2LDEpXSIKICAgICAgICAgIHN0eWxlPXt7IHRyYW5zZm9ybTogYHRyYW5zbGF0ZVgoLSR7dGFiICogMTAwfSUpYCB9fQogICAgICAgID4KICAgICAgICAgIHtUQUJfUFJPSkVDVFMubWFwKChpZHhzLCBzaSkgPT4gewogICAgICAgICAgICBjb25zdCBbZmVhdCwgLi4ucmVzdF0gPSBpZHhzLm1hcCgoaSkgPT4gUFJPSkVDVFNbaV0pOwogICAgICAgICAgICByZXR1cm4gKAogICAgICAgICAgICAgIDxkaXYga2V5PXtUQUJTW3NpXX0gY2xhc3NOYW1lPSJ3LWZ1bGwgc2hyaW5rLTAiIGFyaWEtaGlkZGVuPXtzaSAhPT0gdGFifT4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIGxnOmdyaWQtY29scy1bMS4yNWZyXzFmcl8xZnJdIGxnOmdyaWQtcm93cy0yIGdhcC00Ij4KICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9e2ByZWxhdGl2ZSAke3Jlc3QubGVuZ3RoID09PSAwID8gImxnOmNvbC1zcGFuLTMiIDogImxnOnJvdy1zcGFuLTIifSBtaW4taC1bMzgwcHhdIHJvdW5kZWQgb3ZlcmZsb3ctaGlkZGVuIHRleHQtd2hpdGVgfT4KICAgICAgICAgICAgICAgICAgICA8SW1nIHNyYz17YC9ob21lLyR7ZmVhdC5pbWd9LmpwZ2B9IGFsdD17ZmVhdC50aXRsZX0gY2xzPSIhYWJzb2x1dGUgaW5zZXQtMCIgLz4KICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgaW5zZXQtMCBiZy1ncmFkaWVudC10by10IGZyb20tWyMxMTFhMjRdIHZpYS1bIzExMWEyNF0vNDAgdG8tdHJhbnNwYXJlbnQiIC8+CiAgICAgICAgICAgICAgICAgICAgPENhcmRNZXRhIHA9e2ZlYXR9IGJpZyAvPgogICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAge3Jlc3QubWFwKChwKSA9PiAoCiAgICAgICAgICAgICAgICAgICAgPGRpdiBrZXk9e3AudGl0bGV9IGNsYXNzTmFtZT17YHJlbGF0aXZlIG1pbi1oLVsyMDBweF0gcm91bmRlZCBvdmVyZmxvdy1oaWRkZW4gdGV4dC13aGl0ZSAke3Jlc3QubGVuZ3RoID09PSAxID8gImxnOnJvdy1zcGFuLTIgbGc6Y29sLXNwYW4tMiIgOiByZXN0Lmxlbmd0aCA9PT0gMiA/ICJsZzpyb3ctc3Bhbi0yIiA6ICIifWB9PgogICAgICAgICAgICAgICAgICAgICAgPEltZyBzcmM9e2AvaG9tZS8ke3AuaW1nfS5qcGdgfSBhbHQ9e3AudGl0bGV9IGNscz0iIWFic29sdXRlIGluc2V0LTAiIC8+CiAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgaW5zZXQtMCBiZy1ncmFkaWVudC10by10IGZyb20tWyMxMTFhMjRdIHZpYS1bIzExMWEyNF0vNTAgdG8tdHJhbnNwYXJlbnQiIC8+CiAgICAgICAgICAgICAgICAgICAgICA8Q2FyZE1ldGEgcD17cH0gLz4KICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgKSl9CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgKTsKICAgICAgICAgIH0pfQogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICk7Cn0K
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import Icon from "@/components/Icon";
+
+const TABS = ["All Projects", "Interior", "Exterior", "Industrial", "Commercial", "Coatings"];
+
+type P = { img: string; tag: string; title: string; loc: string; cat: string };
+
+const PROJECTS: P[] = [
+  { img: "work1", tag: "Featured Project", title: "Corporate Office Renovation", loc: "Mississauga, ON", cat: "Commercial Office" },
+  { img: "work2", tag: "Exterior Painting", title: "Industrial Facility", loc: "Burlington, ON", cat: "Industrial" },
+  { img: "work3", tag: "Interior Painting", title: "Healthcare Facility", loc: "Hamilton, ON", cat: "Healthcare" },
+  { img: "work4", tag: "Commercial Interior", title: "Retail Storefront", loc: "Oakville, ON", cat: "Retail" },
+  { img: "work5", tag: "High-Durability Coatings", title: "Warehouse Facility", loc: "Toronto, ON", cat: "Industrial" },
+];
+
+// Which projects (by index) belong to each tab. First entry is the large feature card.
+const TAB_PROJECTS: number[][] = [
+  [0, 1, 2, 3, 4], // All Projects
+  [2, 0, 3],       // Interior
+  [1, 4],          // Exterior
+  [1, 4],          // Industrial
+  [0, 2, 3],       // Commercial
+  [4],             // Coatings
+];
+
+const Img = ({ src, alt = "", cls = "" }: { src: string; alt?: string; cls?: string }) => (
+  <div className={`relative overflow-hidden ${cls}`}>
+    <Image src={src} alt={alt} fill className="object-cover" sizes="(min-width:1024px) 33vw, 100vw" />
+  </div>
+);
+
+function CardMeta({ p, big = false }: { p: P; big?: boolean }) {
+  return (
+    <>
+      <div className={`absolute ${big ? "top-5 left-5" : "top-4 left-4"} hlabel ${big ? "text-[11px]" : "text-[10px]"}`}>{p.tag}</div>
+      <div className={`absolute ${big ? "bottom-5 left-5 right-5" : "bottom-4 left-4 right-4"}`}>
+        <h3 className={`${big ? "text-3xl leading-tight" : "text-xl"} font-bold`}>{p.title}</h3>
+        <p className={`mt-2 ${big ? "text-sm" : "text-xs"} flex items-center justify-between gap-2`}>
+          <span className="flex items-center gap-3">
+            <span className="flex items-center gap-1"><Icon n="pin" size={big ? 14 : 12} />{p.loc}</span>
+            <span className="flex items-center gap-1"><Icon n="building" size={big ? 14 : 12} />{p.cat}</span>
+          </span>
+          <span className="whitespace-nowrap">View Project →</span>
+        </p>
+      </div>
+    </>
+  );
+}
+
+export default function WorkSlider() {
+  const [tab, setTab] = useState(0);
+  const go = (dir: number) => setTab((t) => (t + dir + TABS.length) % TABS.length);
+
+  return (
+    <div>
+      {/* Tabs + arrows */}
+      <div className="mt-8 flex flex-wrap items-center gap-4">
+        <div role="tablist" aria-label="Filter projects" className="flex flex-1 flex-wrap text-sm border border-gray-200 bg-white rounded-sm overflow-hidden">
+          {TABS.map((f, i) => (
+            <button
+              key={f}
+              role="tab"
+              aria-selected={tab === i}
+              onClick={() => setTab(i)}
+              className={`relative px-5 py-3.5 transition-colors ${tab === i ? "bg-[#111a24] text-white font-medium" : "text-gray-700 hover:text-black"}`}
+            >
+              {f}
+              {tab === i && <span className="absolute bottom-0 left-5 right-5 h-0.5 bg-[var(--acc)]" />}
+            </button>
+          ))}
+        </div>
+        <div className="flex items-center gap-3">
+          <button onClick={() => go(-1)} aria-label="Previous category" className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-300 text-white transition hover:bg-gray-400">
+            <span className="rotate-180 inline-flex"><Icon n="arrow" size={18} /></span>
+          </button>
+          <button onClick={() => go(1)} aria-label="Next category" className="flex h-12 w-12 items-center justify-center rounded-full bg-[#111a24] text-white transition hover:bg-black">
+            <Icon n="arrow" size={18} />
+          </button>
+        </div>
+      </div>
+
+      {/* Sliding viewport — one slide per tab */}
+      <div className="mt-5 overflow-hidden">
+        <div
+          className="flex transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+          style={{ transform: `translateX(-${tab * 100}%)` }}
+        >
+          {TAB_PROJECTS.map((idxs, si) => {
+            const [feat, ...rest] = idxs.map((i) => PROJECTS[i]);
+            return (
+              <div key={TABS[si]} className="w-full shrink-0" aria-hidden={si !== tab}>
+                <div className="grid lg:grid-cols-[1.25fr_1fr_1fr] lg:grid-rows-2 gap-4">
+                  <div className={`relative ${rest.length === 0 ? "lg:col-span-3" : "lg:row-span-2"} min-h-[380px] rounded overflow-hidden text-white`}>
+                    <Img src={`/home/${feat.img}.jpg`} alt={feat.title} cls="!absolute inset-0" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#111a24] via-[#111a24]/40 to-transparent" />
+                    <CardMeta p={feat} big />
+                  </div>
+                  {rest.map((p) => (
+                    <div key={p.title} className={`relative min-h-[200px] rounded overflow-hidden text-white ${rest.length === 1 ? "lg:row-span-2 lg:col-span-2" : rest.length === 2 ? "lg:row-span-2" : ""}`}>
+                      <Img src={`/home/${p.img}.jpg`} alt={p.title} cls="!absolute inset-0" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#111a24] via-[#111a24]/50 to-transparent" />
+                      <CardMeta p={p} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
