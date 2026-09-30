@@ -28,11 +28,27 @@ export type Collection = {
   fields: Field[];
 };
 
-export const FILES = ["content/blog.json", "content/special-services.json", "content/settings.json"];
+export const FILES = ["content/blog.json", "content/special-services.json", "content/settings.json", "content/postal-codes.json"];
 
 const icons = ["roller", "building", "spray", "users", "leaf", "shield", "drop", "layers", "gear", "chat", "check", "clock", "pin", "home", "doc"];
 
 export const COLLECTIONS: Collection[] = [
+  {
+    id: "service-areas",
+    title: "Service areas & postal codes",
+    blurb: "Add or remove the postal codes the site serves. The homepage 'Find Your Service' popup uses this to tell visitors whether their area is covered.",
+    file: "content/postal-codes.json",
+    listKey: "areas",
+    itemName: "area",
+    labelKey: "name",
+    subKey: "province",
+    blank: { name: "", province: "ON", prefixes: [] },
+    fields: [
+      { key: "name", label: "Area name", type: "text", required: true, help: 'For example "Toronto". Shown in the popup under "Your postal code".' },
+      { key: "province", label: "Province", type: "text", help: 'For example "ON".' },
+      { key: "prefixes", label: "Postal-code prefixes", type: "lines", required: true, help: "One per line. Use the first letter (e.g. M) to cover every code starting with it, or a full forward sortation area (e.g. M5V) for a specific district. When two areas match the same code, the longest prefix wins." },
+    ],
+  },
   {
     id: "blog",
     title: "Blog posts",

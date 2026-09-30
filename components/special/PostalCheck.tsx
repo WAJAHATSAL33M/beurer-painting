@@ -1,16 +1,16 @@
 "use client";
 import { useState } from "react";
 import Icon from "@/components/Icon";
-import { SERVICE_AREAS } from "@/lib/site-data";
+import { checkServiceArea } from "@/lib/site-data";
 
-/** Quick first-letter postal-code check, same logic as the site's service finder. */
+/** Postal-code check, same logic as the site's service finder. */
 export default function PostalCheck() {
   const [v, setV] = useState("");
   const [res, setRes] = useState<"" | "yes" | "no" | "bad">("");
   const check = () => {
-    const c = v.trim().toUpperCase().replace(/\s/g, "");
-    if (!/^[A-Z]\d[A-Z]\d?[A-Z]?\d?$/.test(c)) return setRes("bad");
-    setRes(SERVICE_AREAS.some((a) => a.prefixes.includes(c[0])) ? "yes" : "no");
+    const r = checkServiceArea(v);
+    if (r === null) return setRes("bad");
+    setRes(r === "available" ? "yes" : "no");
   };
   return (
     <div>

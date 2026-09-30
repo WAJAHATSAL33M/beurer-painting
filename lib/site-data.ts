@@ -22,32 +22,32 @@ export const SERVICES: Service[] = [
   { id: "special-services", label: "Special Services", category: "Special Services", icon: "layers", blurb: "Spray painting, anti-graffiti coatings and other specialized solutions for unique commercial needs.", href: "/services/special-services" },
 ];
 
-// One row per city/town Bauer serves. `prefixes` are the Canadian postal-code
-// FSA letters (the first character) that fall inside that area, used only for
-// the quick check in the popup — swap this for a real lookup/API when you have one.
-export type ServiceArea = { name: string; prefixes: string[] };
+// Service areas are managed in the admin panel at /admin ("Service areas & postal codes")
+// and stored in content/postal-codes.json. One row per city/town Bauer serves.
+// `prefixes` are postal-code prefixes to match against: use the first letter
+// (e.g. "M") to cover every code starting with it, or a full forward sortation
+// area (e.g. "M5V") for a specific district. Longest matching prefix wins, so
+// "M5V" beats "M" when both are present.
+import postalData from "@/content/postal-codes.json";
 
-export const SERVICE_AREAS: ServiceArea[] = [
-  { name: "Toronto", prefixes: ["M"] },
-  { name: "Mississauga", prefixes: ["L"] },
-  { name: "Oakville", prefixes: ["L"] },
-  { name: "Burlington", prefixes: ["L"] },
-  { name: "Hamilton", prefixes: ["L"] },
-  { name: "Guelph", prefixes: ["N"] },
-  { name: "Kitchener", prefixes: ["N"] },
-  { name: "Cambridge", prefixes: ["N"] },
-  { name: "Milton", prefixes: ["L"] },
-  { name: "Brampton", prefixes: ["L"] },
-  { name: "St. Catharines", prefixes: ["L"] },
-  { name: "Niagara Falls", prefixes: ["L"] },
-];
+export type ServiceArea = { name: string; prefixes: string[]; province?: string };
+
+const rawAreas: unknown = (postalData as { areas?: unknown }).areas;
+
+export const SERVICE_AREAS: ServiceArea[] = (
+  Array.isArray(rawAreas) ? rawAreas : []
+)
+  .map((a) => {
+    const r = a as Partial<ServiceArea>;
+    return {
+      name: typeof r.name === "string" ? r.name : "",
+      prefixes: Array.isArray(r.prefixes) ? r.prefixes.filter((p): p is string => typeof p === "string") : [],
+      province: typeof r.province === "string" ? r.province : undefined,
+    };
+  })
+  .filter((a) => a.name && a.prefixes.length > 0);
 
 export const SERVICE_AREA_NAMES = SERVICE_AREAS.map((a) => a.name);
-
-// All FSA letters covered by at least one listed area (drives the popup's yes/no check).
-export const SERVED_PREFIXES = Array.from(new Set(SERVICE_AREAS.flatMap((a) => a.prefixes)));
-
-const POSTAL_RE = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/;
 
 // Standardizes any valid input (m5v2t6, m5v 2t6, M5V-2T6...) to "M5V 2T6".
 // Returns null if the input isn't a valid Canadian postal-code shape.
@@ -57,8 +57,32 @@ export function normalizePostal(raw: string): string | null {
   return `${stripped.slice(0, 3)} ${stripped.slice(3)}`;
 }
 
-export function checkServiceArea(raw: string): "available" | "unavailable" | null {
+export type AreaMatch = {
+  status: "available" | "unavailable" | null;
+  area: ServiceArea | null;
+};
+
+// Finds the service area for a postal code. When several areas match (e.g. a
+// letter prefix and a full FSA), the longest matching prefix wins.
+export function matchServiceArea(raw: string): AreaMatch {
   const code = normalizePostal(raw);
-  if (!code) return null;
-  return SERVED_PREFIXES.includes(code[0]) ? "available" : "unavailable";
+  if (!code) return { status: null, area: null };
+  const stripped = code.replace(" ", "");
+  let best: ServiceArea | null = null;
+  let bestLen = -1;
+  for (const area of SERVICE_AREAS) {
+    for (const p of area.prefixes) {
+      const prefix = p.trim().toUpperCase();
+      if (!prefix) continue;
+      if (stripped.startsWith(prefix) && prefix.length > bestLen) {
+        best = area;
+        bestLen = prefix.length;
+      }
+    }
+  }
+  return best ? { status: "available", area: best } : { status: "unavailable", area: null };
+}
+
+export function checkServiceArea(raw: string): "available" | "unavailable" | null {
+  return matchServiceArea(raw).status;
 }

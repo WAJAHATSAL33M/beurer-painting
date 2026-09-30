@@ -6,6 +6,7 @@ It lets anyone with the password add, edit, reorder and delete:
 - **Blog posts** (title, date, image, summary, full article)
 - **Special services** pages and their questions & answers
 - **Contact details** (phone, email, hours — used across the whole site)
+- **Service areas & postal codes** — add the postal codes you serve; the homepage "Find Your Service" popup uses them to tell visitors if their area is covered
 
 ## Using it (no code)
 1. Go to `/admin` and log in.
