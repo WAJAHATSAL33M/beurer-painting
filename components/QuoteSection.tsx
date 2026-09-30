@@ -48,8 +48,9 @@ export default function QuoteSection() {
         <p className="mt-2 text-gray-500">A few quick details help us understand your needs and provide an accurate quote.</p>
         <ol className="mt-8 flex justify-between text-[11px] text-gray-700 text-center">
           {steps.map((s, i) => (
-            <li key={s} className="flex-1">
-              <span className={`mx-auto mb-2 w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${i === 0 ? "bg-[var(--acc)] text-white" : "bg-gray-200 text-gray-600"}`}>{i + 1}</span>{s}
+            <li key={s} className="relative flex-1">
+              {i < steps.length - 1 && <span className="absolute top-4 left-[calc(50%+22px)] right-[calc(-50%+22px)] hidden h-px bg-gray-300 sm:block" />}
+              <span className={`relative mx-auto mb-2 w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${i === 0 ? "bg-[var(--acc)] text-white" : "bg-gray-200 text-gray-600"}`}>{i + 1}</span>{s}
             </li>
           ))}
         </ol>
@@ -68,9 +69,12 @@ export default function QuoteSection() {
           </div>
           <Link href="/contact" className="hbtn w-full justify-center mt-5">Next Step <Icon n="arrow" size={16} /></Link>
         </div>
-        <div className="mt-8 flex flex-wrap items-center gap-4 text-sm">
-          <span className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center"><Icon n="headset" /></span>
-          <p><span className="block text-[11px] tracking-widest font-semibold">NEED HELP?</span>Speak with our team | {settings.phone} | {settings.email}</p>
+        <div className="mt-8 flex flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-4">
+            <span className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center"><Icon n="headset" /></span>
+            <p><span className="block text-[11px] tracking-widest font-semibold">NEED HELP?</span>Speak with our team | {settings.phone} | {settings.email}</p>
+          </div>
+          <Link href="/contact" className="text-sm font-medium text-bauer-ink">We&apos;re happy<br />to help <span className="text-[var(--acc)]">→</span></Link>
         </div>
       </div>
     </section>

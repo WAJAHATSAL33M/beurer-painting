@@ -48,10 +48,13 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/15">
-        <div className="max-w-content mx-auto px-6 lg:px-10 py-5 flex flex-wrap justify-between gap-4 text-sm text-white/75">
-          <p>© {new Date().getFullYear()} Bauer Painting. All rights reserved.</p>
+        <div className="max-w-content mx-auto px-6 lg:px-10 py-5 flex flex-wrap items-end justify-between gap-4 text-sm text-white/75">
+          <div>
+            <p className="hidden text-[10px] font-medium leading-6 tracking-[0.24em] text-white/50 md:block">PEOPLE. SPACES. BUSINESSES. STRONGER TOMORROWS.<span className="mt-2 block h-0.5 w-9 bg-[var(--acc)]" /></p>
+            <p className="mt-3">© {new Date().getFullYear()} Bauer Painting. All rights reserved.</p>
+          </div>
           <p className="flex gap-5"><span>Privacy Policy</span><span>Terms of Service</span><span>Sitemap</span></p>
-          <p>Built for Better Spaces.</p>
+          <p>Built for Better Spaces.<span className="mt-2 block h-0.5 w-9 bg-[var(--acc)]" /></p>
         </div>
       </div>
     </footer>

@@ -7,7 +7,7 @@ import Icon from "./Icon";
 import { SERVICES, matchServiceArea, normalizePostal, type ServiceArea } from "@/lib/site-data";
 
 export default function ServiceFinder({ variant = "hero" }: { variant?: "hero" | "section" }) {
-  const [service, setService] = useState(SERVICES[0].label);
+  const [service, setService] = useState("");
   const [postal, setPostal] = useState("");
   const [result, setResult] = useState<"available" | "unavailable" | null>(null);
   const [area, setArea] = useState<ServiceArea | null>(null);
@@ -72,52 +72,44 @@ export default function ServiceFinder({ variant = "hero" }: { variant?: "hero" |
     <>
       {isHero ? (
         <div className="mt-4">
-          <div className="grid gap-3 sm:grid-cols-2">
-            <div>
-              <label htmlFor="sf-service" className="mb-1.5 block text-[11px] font-bold tracking-[0.14em] text-gray-700">
-                FIND YOUR SERVICE
-              </label>
-              <select
-                id="sf-service"
-                value={service}
-                onChange={(e) => setService(e.target.value)}
-                className={`${fieldCls} appearance-none pr-10 bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23667085%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22m6 9 6 6 6-6%22/></svg>')] bg-no-repeat bg-[position:right_1rem_center]`}
-              >
-                {SERVICES.map((s) => (
-                  <option key={s.label}>{s.label}</option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label htmlFor="sf-postal" className="mb-1.5 block text-[11px] font-bold tracking-[0.14em] text-gray-700">
-                POSTAL CODE
-              </label>
-              <input
-                id="sf-postal"
-                value={postal}
-                onChange={(e) => {
-                  setPostal(e.target.value);
-                  setError("");
-                }}
-                onKeyDown={(e) => e.key === "Enter" && submit()}
-                className={fieldCls}
-                placeholder="Enter Postal Code (e.g. L5B 2C9)"
-                autoComplete="postal-code"
-              />
-            </div>
+          <div className="grid gap-3 lg:grid-cols-[1fr_1.3fr_auto]">
+            <select
+              id="sf-service"
+              aria-label="Select a service"
+              value={service}
+              onChange={(e) => setService(e.target.value)}
+              className={`${fieldCls} appearance-none pr-10 bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23667085%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22m6 9 6 6 6-6%22/></svg>')] bg-no-repeat bg-[position:right_1rem_center]`}
+            >
+              <option value="" disabled hidden>Select a Service</option>
+              {SERVICES.map((s) => (
+                <option key={s.label}>{s.label}</option>
+              ))}
+            </select>
+            <input
+              id="sf-postal"
+              value={postal}
+              onChange={(e) => {
+                setPostal(e.target.value);
+                setError("");
+              }}
+              onKeyDown={(e) => e.key === "Enter" && submit()}
+              className={fieldCls}
+              placeholder="Enter Postal Code (e.g. L5B 2C9)"
+              autoComplete="postal-code"
+            />
+            <button
+              type="button"
+              onClick={submit}
+              className="hbtn h-14 justify-center !rounded-md whitespace-nowrap lg:min-w-[190px]"
+            >
+              Find Service <Icon n="arrow" size={16} />
+            </button>
           </div>
           {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
-          <button
-            type="button"
-            onClick={submit}
-            className="hbtn mt-3 h-14 w-full justify-center !rounded-lg sm:w-auto sm:min-w-[248px]"
-          >
-            Find Your Service <Icon n="arrow" size={16} />
-          </button>
         </div>
       ) : (
         <div className="mt-7">
-          <div className="flex max-w-lg">
+          <div className="flex max-w-lg flex-col gap-3 sm:flex-row">
             <input
               value={postal}
               onChange={(e) => {
@@ -125,11 +117,11 @@ export default function ServiceFinder({ variant = "hero" }: { variant?: "hero" |
                 setError("");
               }}
               onKeyDown={(e) => e.key === "Enter" && submit()}
-              className="h-14 flex-1 border border-gray-300 bg-white px-5 text-gray-800"
+              className="h-14 min-w-0 flex-1 border border-gray-300 bg-white px-5 text-gray-800"
               placeholder="Enter your postal code"
               autoComplete="postal-code"
             />
-            <button type="button" onClick={submit} className="hbtn h-14 !rounded-none">
+            <button type="button" onClick={submit} className="hbtn h-14 w-full justify-center !rounded-none sm:w-auto">
               Find Service <Icon n="arrow" size={16} />
             </button>
           </div>

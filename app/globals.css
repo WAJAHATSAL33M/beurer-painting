@@ -126,6 +126,7 @@ body {
 .hbtn.sm,.hghost.sm{padding:11px 20px;font-size:14px}
 .hlabel{display:flex;align-items:center;gap:14px;font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
 .hlabel::before{content:"";width:36px;height:2px;background:var(--acc)}
+.script{font-family:"Segoe Script","Bradley Hand","Brush Script MT","Snell Roundhand",cursive;font-style:italic}
 
 /* ==========================================================================
    Global animation primitives (see Bauer motion spec, section 13).
