@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import Header from "@/components/Header";
+import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
+import { SEC } from "@/lib/spacing";
 
 export const metadata = {
   title: "Our Process | Bauer Painting",
@@ -82,12 +83,12 @@ const StepIcon = ({ n }: { n: string }) => (
 export default function ProcessPage() {
   return (
     <>
-      <Header />
+      <SiteHeader />
       <main>
         {/* ---------- 1 · HERO ---------- */}
         <section className="relative overflow-hidden bg-white">
           <div className="grid lg:grid-cols-2">
-            <div className={`${pad} py-14 lg:py-20 lg:pr-10`}>
+            <div className={`${pad} ${SEC} lg:pr-10`}>
               <Eyebrow label="Our Process" />
               <h1 className={`${H} mt-6 text-[clamp(38px,4.4vw,62px)]`}>
                 A Better Project Starts With a Better Process<Dot />
@@ -122,7 +123,7 @@ export default function ProcessPage() {
 
         {/* ---------- 2 · FIVE STEPS ---------- */}
         <section className="bg-white border-t border-gray-100">
-          <div className={`${pad} py-14 lg:py-20`}>
+          <div className={`${pad} ${SEC}`}>
             <Eyebrow label="Our Process" />
             <h2 className={`${H} mt-6 text-[clamp(34px,3.8vw,54px)]`}>
               From First Conversation<br />to Final Finish<Dot />
@@ -173,7 +174,7 @@ export default function ProcessPage() {
         {/* ---------- 3 · ASSESS / PLAN ---------- */}
         <section className="bg-white border-t border-gray-100">
           <div className="grid lg:grid-cols-2">
-            <div className={`${pad} py-14 lg:py-20 lg:pr-10`}>
+            <div className={`${pad} ${SEC} lg:pr-10`}>
               <Eyebrow label="Our Process" />
               <h2 className={`${H} mt-6 text-[clamp(34px,3.8vw,54px)]`}>
                 The Right Preparation Starts Before the First Coat<Dot />
@@ -235,7 +236,7 @@ export default function ProcessPage() {
 
         {/* ---------- 4 · PREPARE / EXECUTE ---------- */}
         <section className="bg-white border-t border-gray-100">
-          <div className={`${pad} py-14 lg:py-20`}>
+          <div className={`${pad} ${SEC}`}>
             <div className="flex flex-wrap items-start justify-between gap-8">
               <div className="max-w-3xl">
                 <Eyebrow label="Our Process" />
@@ -304,7 +305,7 @@ export default function ProcessPage() {
         {/* ---------- 5 · REVIEW ---------- */}
         <section className="bg-white border-t border-gray-100">
           <div className="grid lg:grid-cols-2">
-            <div className={`${pad} py-14 lg:py-20 lg:pr-10`}>
+            <div className={`${pad} ${SEC} lg:pr-10`}>
               <Eyebrow label="Our Process" />
               <h2 className={`${H} mt-6 text-[clamp(34px,3.8vw,54px)]`}>
                 The Job Isn&rsquo;t Finished Until the Details Are Right<Dot />
@@ -354,7 +355,7 @@ export default function ProcessPage() {
         {/* ---------- 6 · CTA ---------- */}
         <section className="bg-white border-t border-gray-100">
           <div className="grid lg:grid-cols-2">
-            <div className={`${pad} py-14 lg:py-20 lg:pr-10`}>
+            <div className={`${pad} ${SEC} lg:pr-10`}>
               <Eyebrow label="Our Process" />
               <h2 className={`${H} mt-6 text-[clamp(34px,4vw,58px)]`}>
                 Ready to Put the<br />Process to Work?<Dot />

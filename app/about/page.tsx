@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
 import type { ReactNode } from "react";
+import { SEC, SEC_SM } from "@/lib/spacing";
 
 export const metadata = {
   title: "About Us | Bauer Painting",
@@ -89,7 +90,7 @@ export default function AboutPage() {
         {/* ---------- 1 · HERO ---------- */}
         <section className="relative overflow-hidden bg-white">
           <div className="grid lg:grid-cols-2">
-            <div className={`${pad} py-14 lg:py-20 lg:pr-10`}>
+            <div className={`${pad} ${SEC} lg:pr-10`}>
               <Eyebrow n="01" label="About Bauer" />
               <Brand />
               <h1 className={`${H} mt-4 text-[clamp(38px,4.4vw,62px)]`}>
@@ -122,7 +123,7 @@ export default function AboutPage() {
         {/* ---------- 2 · WHO WE ARE ---------- */}
         <section className="bg-white border-t border-gray-100">
           <div className="grid lg:grid-cols-[1fr_1fr_220px]">
-            <div className={`${pad} py-14 lg:py-20 lg:pr-10`}>
+            <div className={`${pad} ${SEC} lg:pr-10`}>
               <Eyebrow n="02" label="Who We Are" />
               <Brand />
               <h2 className={`${H} mt-4 text-[clamp(34px,3.8vw,54px)]`}>
@@ -141,7 +142,7 @@ export default function AboutPage() {
             </div>
             <Photo src="/about/about-story.jpg" alt="Bauer Painting team at work in a commercial space" cls="min-h-[320px] lg:min-h-0" />
             {/* timeline */}
-            <div className="hidden lg:block py-20 pr-10 pl-2">
+            <div className="hidden lg:block py-16 lg:py-24 pr-10 pl-2">
               <div className="relative border-l-2 border-gray-200 pl-8 space-y-12">
                 {[
                   ["2001", "Bauer Painting Founded", "Started with a commitment to quality workmanship and customer service."],
@@ -180,7 +181,7 @@ export default function AboutPage() {
 
         {/* ---------- 3 · HOW WE WORK WITH CLIENTS ---------- */}
         <section className="bg-white border-t border-gray-100">
-          <div className={`${pad} py-14 lg:py-20`}>
+          <div className={`${pad} ${SEC}`}>
             <Eyebrow n="03" label="How We Work With Clients" />
             <div className="flex flex-wrap items-start justify-between gap-8">
               <div className="max-w-3xl">
@@ -228,7 +229,7 @@ export default function AboutPage() {
         {/* ---------- 4 · STANDARDS ---------- */}
         <section className="bg-white border-t border-gray-100">
           <div className="grid lg:grid-cols-2">
-            <div className={`${pad} py-14 lg:py-20 lg:pr-10`}>
+            <div className={`${pad} ${SEC} lg:pr-10`}>
               <Eyebrow n="04" label="What Bauer Stands For" />
               <Brand />
               <h2 className={`${H} mt-4 text-[clamp(34px,3.8vw,54px)]`}>
@@ -251,7 +252,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="grid lg:grid-cols-[1fr_380px] border-t border-gray-100">
-            <div className={`${pad} py-12 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10 sm:divide-x divide-gray-200`}>
+            <div className={`${pad} ${SEC_SM} grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10 sm:divide-x divide-gray-200`}>
               {[
                 ["01", "shield", "Professionalism", "A structured approach to commercial projects, with attention to detail and a commitment to doing the job right."],
                 ["02", "gear", "Quality", "Careful preparation, the right products and methods, and attention to the finished result."],
@@ -280,7 +281,7 @@ export default function AboutPage() {
         {/* ---------- 5 · LET'S WORK TOGETHER ---------- */}
         <section className="bg-white border-t border-gray-100">
           <div className="grid lg:grid-cols-2">
-            <div className={`${pad} py-14 lg:py-20 lg:pr-10`}>
+            <div className={`${pad} ${SEC} lg:pr-10`}>
               <Eyebrow n="05" label="Let's Work Together" />
               <Brand />
               <h2 className={`${H} mt-4 text-[clamp(34px,3.8vw,54px)]`}>
@@ -305,7 +306,7 @@ export default function AboutPage() {
             </div>
           </div>
           {/* service area */}
-          <div className={`${pad} py-12 border-t border-gray-100`}>
+          <div className={`${pad} ${SEC_SM} border-t border-gray-100`}>
             <div className="grid lg:grid-cols-[280px_1fr_240px] gap-10 items-start">
               <div>
                 <p className="text-[22px] font-extrabold text-[#0B1220]">Our Service Area</p>

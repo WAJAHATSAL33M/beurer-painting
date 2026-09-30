@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
 import QuoteForm from "@/components/QuoteForm";
+import { SEC, SEC_SM } from "@/lib/spacing";
 
 export const metadata = {
   title: "Contact Us | Bauer Painting",
@@ -120,7 +121,7 @@ export default function ContactPage() {
 
       {/* 1 — Contact Us (hero) */}
       <section className="grid lg:grid-cols-2 reveal">
-        <div className={`${pad} lg:pl-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pr-12 py-14 sm:py-16 lg:py-20`}>
+        <div className={`${pad} lg:pl-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pr-12 ${SEC}`}>
           <Eyebrow n="01" label="Contact Us" />
           <Brand />
           <h1 className={`${H} mt-3 text-[clamp(36px,4.4vw,58px)]`}>
@@ -158,7 +159,7 @@ export default function ContactPage() {
 
       {/* 2 — Request a Quote */}
       <section id="quote-form" className="grid lg:grid-cols-2 bg-[#F8F8F9] reveal scroll-mt-20">
-        <div className={`${pad} lg:pl-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pr-12 py-14 sm:py-16`}>
+        <div className={`${pad} lg:pl-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pr-12 ${SEC}`}>
           <Eyebrow n="02" label="Request a Quote" />
           <Brand />
           <h2 className={`${H} mt-3 text-[clamp(32px,3.8vw,52px)]`}>Tell Us About Your Project<Dot /></h2>
@@ -181,7 +182,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className={`${pad} lg:pr-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pl-12 py-14 sm:py-16`}>
+        <div className={`${pad} lg:pr-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pl-12 ${SEC}`}>
           <QuoteForm />
         </div>
       </section>
@@ -189,7 +190,7 @@ export default function ContactPage() {
       {/* 3 — What happens next */}
       <section className="bg-white reveal">
         <div className="grid lg:grid-cols-2">
-          <div className={`${pad} lg:pl-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pr-12 py-14 sm:py-16`}>
+          <div className={`${pad} lg:pl-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pr-12 ${SEC}`}>
             <Eyebrow n="03" label="What Happens Next" />
             <Brand />
             <h2 className={`${H} mt-3 text-[clamp(32px,3.8vw,52px)]`}>What Happens After You Reach Out?<Dot /></h2>
@@ -229,7 +230,7 @@ export default function ContactPage() {
 
         {/* Contact Bauer directly band */}
         <div className="bg-bauer-mist">
-          <div className={`${pad} py-12`}>
+          <div className={`${pad} ${SEC_SM}`}>
             <div className="flex flex-wrap items-start justify-between gap-8 mb-10">
               <div>
                 <h3 className="font-heading font-extrabold text-2xl text-bauer-ink">Contact Bauer Directly</h3>
@@ -264,7 +265,7 @@ export default function ContactPage() {
       {/* 4 — Ready to get started */}
       <section className="bg-white reveal">
         <div className="grid lg:grid-cols-2">
-          <div className={`${pad} lg:pl-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pr-12 py-14 sm:py-16 flex flex-col justify-center`}>
+          <div className={`${pad} lg:pl-[max(2.5rem,calc((100vw-1200px)/2+2.5rem))] lg:pr-12 ${SEC} flex flex-col justify-center`}>
             <Eyebrow n="04" label="Get Started Today" />
             <Brand />
             <h2 className={`${H} mt-3 text-[clamp(32px,3.8vw,52px)]`}>Ready to Get Your Project Started?<Dot /></h2>
@@ -303,7 +304,7 @@ export default function ContactPage() {
         </div>
 
         {/* Service area band */}
-        <div className={`${pad} py-10 sm:py-12 border-t border-gray-200`}>
+        <div className={`${pad} ${SEC_SM} border-t border-gray-200`}>
           <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-10">
             <div className="lg:max-w-xs shrink-0">
               <h3 className="font-bold text-bauer-ink text-lg">Our Service Area</h3>
